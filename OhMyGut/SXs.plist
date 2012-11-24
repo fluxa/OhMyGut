@@ -8,5 +8,297 @@
 		<key>text</key>
 		<string>Excessive belching, burping or bloating</string>
 	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Flatulence</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Sense of fullness during and after meals</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Alternating diarrhea and constipation</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Constipation</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Diarrhea or loose, unformed stool</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Abdominal pain</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Burning sensation in stomach 1-4 hous after eating</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>text</key>
+		<string>Use antacids</string>
+	</dict>
+    
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Crave sweets during the day</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Irritable if meals are missed</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Need coffee to get started or keep yourself going</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Eating relieves fatigue</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Get lightheaded if meals are missed</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Agitated, easily upset, nervous</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Fatigue after meals</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Eating sweets doesn't relieve cravings for sugar</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Must have sweet after meals</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Frequent urination</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>text</key>
+		<string>Increased thirst and appetite</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>text</key>
+		<string>Difficulty losing weight</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>text</key>
+		<string>Weight gain even with low-calorie diet</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>text</key>
+		<string>Waist girth is equal or larger to hip girth</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>text</key>
+		<string>Accumulation of belly fat</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>text</key>
+		<string>Tired, sluggish</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>text</key>
+		<string>Not enough energy to get through the day</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>text</key>
+		<string>Energy fluctuates throughout the day</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>text</key>
+		<string>Easily fatigued</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>text</key>
+		<string>Diminished sex drive</string>
+	</dict>
+    
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Iniability to concentrate or focus</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Difficulty remembering things</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Decreased attention span</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Depression or lack of motivation</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Anxiety</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Insomnia or restless sleep</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>text</key>
+		<string>Heart palpitations</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>text</key>
+		<string>Muscle soreness or pain</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>text</key>
+		<string>Joint soreness or pain</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>text</key>
+		<string>Decreased joint mobility</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>text</key>
+		<string>Swelling of joints</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>text</key>
+		<string>Whole body pain</string>
+	</dict>
+    
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>text</key>
+		<string>Itchy skin</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>text</key>
+		<string>Skin rashes (eczema, psoraisis, hives, etc.)</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>text</key>
+		<string>Dry skin</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>text</key>
+		<string>Acne breakouts</string>
+	</dict>
+    
+    <dict>
+		<key>gid</key>
+		<integer>7</integer>
+		<key>text</key>
+		<string>Cough</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>7</integer>
+		<key>text</key>
+		<string>Asthma, difficulty breathing</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>7</integer>
+		<key>text</key>
+		<string>Sinus congestion</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>7</integer>
+		<key>text</key>
+		<string>Respiratory allergies</string>
+	</dict>
 </array>
 </plist>
