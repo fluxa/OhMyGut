@@ -17,14 +17,15 @@
 		BF56AF311660DC05005B465A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AF301660DC05005B465A /* Default@2x.png */; };
 		BF56AF331660DC05005B465A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AF321660DC05005B465A /* Default-568h@2x.png */; };
 		BF56AF361660DC05005B465A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF56AF341660DC05005B465A /* MainStoryboard.storyboard */; };
-		BF56AF391660DC05005B465A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF381660DC05005B465A /* ViewController.m */; };
 		BF56AF4C1660EED8005B465A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF4A1660EED8005B465A /* DataModel.xcdatamodeld */; };
 		BF56AF4E1660EF1A005B465A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF56AF4D1660EF1A005B465A /* CoreData.framework */; };
 		BF56AF511660F141005B465A /* Data.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF501660F141005B465A /* Data.m */; };
-		BF56AF541660FA3E005B465A /* SXs.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF531660FA3E005B465A /* SXs.m */; };
-		BF56AF571660FA3F005B465A /* SXGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF561660FA3F005B465A /* SXGroup.m */; };
 		BF56AF591660FC17005B465A /* SXGroups.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF56AF581660FC17005B465A /* SXGroups.plist */; };
 		BF56AF5C1660FD71005B465A /* SXs.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF56AF5B1660FD71005B465A /* SXs.plist */; };
+		BF56AF6016610399005B465A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF5F16610399005B465A /* MainViewController.m */; };
+		BF56AF64166104FA005B465A /* SXCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF63166104FA005B465A /* SXCell.m */; };
+		BF56AF6716610FFE005B465A /* SXGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF6616610FFE005B465A /* SXGroup.m */; };
+		BF56AF6A16611015005B465A /* SXs.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AF6916611015005B465A /* SXs.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,18 +43,20 @@
 		BF56AF301660DC05005B465A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		BF56AF321660DC05005B465A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BF56AF351660DC05005B465A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		BF56AF371660DC05005B465A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BF56AF381660DC05005B465A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BF56AF4B1660EED8005B465A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		BF56AF4D1660EF1A005B465A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BF56AF4F1660F141005B465A /* Data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		BF56AF501660F141005B465A /* Data.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data.m; sourceTree = "<group>"; };
-		BF56AF521660FA3E005B465A /* SXs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXs.h; sourceTree = "<group>"; };
-		BF56AF531660FA3E005B465A /* SXs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXs.m; sourceTree = "<group>"; };
-		BF56AF551660FA3F005B465A /* SXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXGroup.h; sourceTree = "<group>"; };
-		BF56AF561660FA3F005B465A /* SXGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXGroup.m; sourceTree = "<group>"; };
 		BF56AF581660FC17005B465A /* SXGroups.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SXGroups.plist; sourceTree = "<group>"; };
 		BF56AF5B1660FD71005B465A /* SXs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SXs.plist; sourceTree = "<group>"; };
+		BF56AF5E16610399005B465A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		BF56AF5F16610399005B465A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		BF56AF62166104FA005B465A /* SXCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXCell.h; sourceTree = "<group>"; };
+		BF56AF63166104FA005B465A /* SXCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXCell.m; sourceTree = "<group>"; };
+		BF56AF6516610FFE005B465A /* SXGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXGroup.h; sourceTree = "<group>"; };
+		BF56AF6616610FFE005B465A /* SXGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXGroup.m; sourceTree = "<group>"; };
+		BF56AF6816611015005B465A /* SXs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SXs.h; sourceTree = "<group>"; };
+		BF56AF6916611015005B465A /* SXs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SXs.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +105,12 @@
 		BF56AF221660DC05005B465A /* OhMyGut */ = {
 			isa = PBXGroup;
 			children = (
+				BF56AF61166104D9005B465A /* Component */,
+				BF56AF5D16610384005B465A /* Views */,
 				BF56AF3F1660E170005B465A /* Data */,
 				BF56AF2B1660DC05005B465A /* AppDelegate.h */,
 				BF56AF2C1660DC05005B465A /* AppDelegate.m */,
 				BF56AF341660DC05005B465A /* MainStoryboard.storyboard */,
-				BF56AF371660DC05005B465A /* ViewController.h */,
-				BF56AF381660DC05005B465A /* ViewController.m */,
 				BF56AF231660DC05005B465A /* Supporting Files */,
 			);
 			path = OhMyGut;
@@ -135,12 +138,30 @@
 				BF56AF4A1660EED8005B465A /* DataModel.xcdatamodeld */,
 				BF56AF4F1660F141005B465A /* Data.h */,
 				BF56AF501660F141005B465A /* Data.m */,
-				BF56AF551660FA3F005B465A /* SXGroup.h */,
-				BF56AF561660FA3F005B465A /* SXGroup.m */,
-				BF56AF521660FA3E005B465A /* SXs.h */,
-				BF56AF531660FA3E005B465A /* SXs.m */,
+				BF56AF6516610FFE005B465A /* SXGroup.h */,
+				BF56AF6616610FFE005B465A /* SXGroup.m */,
+				BF56AF6816611015005B465A /* SXs.h */,
+				BF56AF6916611015005B465A /* SXs.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		BF56AF5D16610384005B465A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF56AF5E16610399005B465A /* MainViewController.h */,
+				BF56AF5F16610399005B465A /* MainViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BF56AF61166104D9005B465A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				BF56AF62166104FA005B465A /* SXCell.h */,
+				BF56AF63166104FA005B465A /* SXCell.m */,
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +234,12 @@
 			files = (
 				BF56AF291660DC05005B465A /* main.m in Sources */,
 				BF56AF2D1660DC05005B465A /* AppDelegate.m in Sources */,
-				BF56AF391660DC05005B465A /* ViewController.m in Sources */,
 				BF56AF4C1660EED8005B465A /* DataModel.xcdatamodeld in Sources */,
 				BF56AF511660F141005B465A /* Data.m in Sources */,
-				BF56AF541660FA3E005B465A /* SXs.m in Sources */,
-				BF56AF571660FA3F005B465A /* SXGroup.m in Sources */,
+				BF56AF6016610399005B465A /* MainViewController.m in Sources */,
+				BF56AF64166104FA005B465A /* SXCell.m in Sources */,
+				BF56AF6716610FFE005B465A /* SXGroup.m in Sources */,
+				BF56AF6A16611015005B465A /* SXs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

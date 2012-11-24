@@ -9,10 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class SXs;
 
 @interface SXGroup : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSNumber * gid;
+@property (nonatomic, retain) NSSet *sxsbygroup;
+@end
+
+@interface SXGroup (CoreDataGeneratedAccessors)
+
+- (void)addSxsbygroupObject:(SXs *)value;
+- (void)removeSxsbygroupObject:(SXs *)value;
+- (void)addSxsbygroup:(NSSet *)values;
+- (void)removeSxsbygroup:(NSSet *)values;
 
 @end

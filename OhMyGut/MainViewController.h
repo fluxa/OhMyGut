@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  OhMyGut
 //
 //  Created by Juan-Manuel Fluxá on 11/24/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainViewController : UIViewController
 
 @end

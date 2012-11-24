@@ -3,13 +3,14 @@
     <entity name="SXGroup" representedClassName="SXGroup" syncable="YES">
         <attribute name="gid" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sxsbygroup" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SXs" inverseName="group" inverseEntity="SXs" syncable="YES"/>
     </entity>
     <entity name="SXs" representedClassName="SXs" syncable="YES">
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SXGroup" syncable="YES"/>
+        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SXGroup" inverseName="sxsbygroup" inverseEntity="SXGroup" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SXGroup" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="SXGroup" positionX="160" positionY="192" width="128" height="90"/>
         <element name="SXs" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

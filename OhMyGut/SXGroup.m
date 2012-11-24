@@ -7,11 +7,13 @@
 //
 
 #import "SXGroup.h"
+#import "SXs.h"
 
 
 @implementation SXGroup
 
 @dynamic name;
 @dynamic gid;
+@dynamic sxsbygroup;
 
 @end

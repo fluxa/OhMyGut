@@ -7,12 +7,11 @@
 //
 
 #import "Data.h"
-#import "SXGroup.h"
-#import "SXs.h"
 
 @interface Data ()
 {
     NSArray *_groups;
+    NSArray *_symptoms;
 }
 @end
 
@@ -36,6 +35,7 @@
 - (id) init {
     self = [super init];
     [self managedObjectContext];
+    [self loadInitialData];
     return self;
 }
 
@@ -43,10 +43,32 @@
     
     NSArray *groups = [self getGroups];
     if ([groups count] == 0) {
-        
+        groups = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SXGroups" ofType:@"plist"]];
+        for (NSDictionary *group in groups) {
+            SXGroup *sxgroup = [NSEntityDescription insertNewObjectForEntityForName:@"SXGroup"
+                                                             inManagedObjectContext:self.managedObjectContext];
+            sxgroup.gid = [group objectForKey:@"gid"];
+            sxgroup.name = [group objectForKey:@"name"];
+            
+        }
     }
     
+    NSArray *symptoms = [self getSymptoms];
+    if ([symptoms count] == 0) {
+        symptoms = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SXs" ofType:@"plist"]];
+        for (NSDictionary *sx in symptoms) {
+            SXs *sxs = [NSEntityDescription insertNewObjectForEntityForName:@"SXs"
+                                                             inManagedObjectContext:self.managedObjectContext];
+            SXGroup *sxgroup = [self groupByID:[[sx objectForKey:@"gid"] intValue]];
+            sxs.group = sxgroup;
+            sxs.text = [sx objectForKey:@"text"];
+            
+        }
+    }
     
+    NSError *error = nil;
+    [self.managedObjectContext save:&error];
+
 }
 
 - (NSArray*) getGroups {
@@ -54,12 +76,40 @@
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SXGroup"];
         NSError *error = nil;
         _groups = [self.managedObjectContext executeFetchRequest:request error:&error];
-        if (error == nil) {
-            return _groups;
+        if (error != nil) {
+            Alert(@"Data", [error description]);
         }
     }
-    return [NSArray array];
+    return _groups;
 }
+
+- (NSArray*) getSymptoms {
+    if (_symptoms == nil) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SXs"];
+        NSError *error = nil;
+        _symptoms = [self.managedObjectContext executeFetchRequest:request error:&error];
+        if (error != nil) {
+            Alert(@"Data", [error description]);
+        }
+    }
+    return _symptoms;
+}
+
+- (SXGroup*) groupByID:(int) gid {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gid == %d",gid];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SXGroup"];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *a = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([a count] > 0 && error == nil)
+    {
+        return (SXGroup*)[a objectAtIndex:0];
+    }
+    return nil;
+}
+
+
 
 #pragma mark - Core Data stack
 

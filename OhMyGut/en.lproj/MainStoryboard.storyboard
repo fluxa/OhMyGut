@@ -4,14 +4,72 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-GD-aWF">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="sxcell" rowHeight="75" id="6Wn-ms-fQV" customClass="SXCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kAa-FC-KWp">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="161" id="wSQ-VG-8fD"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="0"/>
+                                                        <segment title="1"/>
+                                                        <segment title="2"/>
+                                                        <segment title="3"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="133" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-gG-C8y">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="133" id="0hi-XV-L0u"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="top" secondItem="6Wn-ms-fQV" secondAttribute="top" constant="13" id="11C-cQ-jYO"/>
+                                            <constraint firstItem="kAa-FC-KWp" firstAttribute="bottom" secondItem="EPt-gG-C8y" secondAttribute="bottom" type="default" id="7UH-Nz-iMy"/>
+                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="top" secondItem="kAa-FC-KWp" secondAttribute="top" type="default" id="Sn9-bB-jC2"/>
+                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="leading" secondItem="6Wn-ms-fQV" secondAttribute="leading" constant="11" id="kTD-fk-yFT"/>
+                                            <constraint firstItem="kAa-FC-KWp" firstAttribute="leading" secondItem="EPt-gG-C8y" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="phA-He-GiE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="buttons" destination="kAa-FC-KWp" id="mKh-Ps-4wF"/>
+                                            <outlet property="titleLabel" destination="EPt-gG-C8y" id="mM5-aN-qds"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="EME-5v-hgR"/>
+                                    <outlet property="delegate" destination="2" id="udD-rS-l3s"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TEo-GD-aWF" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Klk-1z-2fJ"/>
+                            <constraint firstItem="TEo-GD-aWF" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="QPx-ZR-adD"/>
+                            <constraint firstItem="TEo-GD-aWF" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="nf4-3V-Wm7"/>
+                            <constraint firstItem="TEo-GD-aWF" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="pTq-Lp-vAu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="YGO-dh-HuM"/>
                 </viewController>
@@ -83,8 +141,18 @@
         </scene>
     </scenes>
     <classes>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SXCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SXCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="buttons" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -7,6 +7,7 @@
 //
 
 #import "SXs.h"
+#import "SXGroup.h"
 
 
 @implementation SXs

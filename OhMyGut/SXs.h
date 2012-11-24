@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class SXGroup;
 
 @interface SXs : NSManagedObject
 
 @property (nonatomic, retain) NSString * text;
-@property (nonatomic, retain) NSManagedObject *group;
+@property (nonatomic, retain) SXGroup *group;
 
 @end
