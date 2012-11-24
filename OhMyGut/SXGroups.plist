@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>Digestion</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Blood Sugar</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>name</key>
+		<string>Weight Regulation</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>name</key>
+		<string>Energy</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>name</key>
+		<string>Cognitive/Mood</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>name</key>
+		<string>Pain/Inflammation</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>name</key>
+		<string>Skin</string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>7</integer>
+		<key>name</key>
+		<string>Respiratory</string>
+	</dict>
+</array>
+</plist>

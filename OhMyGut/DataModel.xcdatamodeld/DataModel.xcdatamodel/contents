@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="SXGroup" representedClassName="SXGroup" syncable="YES">
+        <attribute name="gid" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SXs" representedClassName="SXs" syncable="YES">
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SXGroup" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="SXGroup" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="SXs" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>
