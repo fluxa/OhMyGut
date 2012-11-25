@@ -8,11 +8,15 @@
 
 #import "Data.h"
 
+
 @interface Data ()
 {
     NSArray *_groups;
     NSArray *_symptoms;
+    NSArray *_foodGroups;
+    NSArray *_foods;
 }
+
 @end
 
 @implementation Data
@@ -51,6 +55,7 @@
             sxgroup.name = [group objectForKey:@"name"];
             
         }
+        _groups = nil;
     }
     
     NSArray *symptoms = [self getSymptoms];
@@ -60,12 +65,50 @@
             SXs *sxs = [NSEntityDescription insertNewObjectForEntityForName:@"SXs"
                                                              inManagedObjectContext:self.managedObjectContext];
             SXGroup *sxgroup = [self groupByID:[[sx objectForKey:@"gid"] intValue]];
+            sxs.sxid = [sx objectForKey:@"sxid"];
             sxs.group = sxgroup;
             sxs.text = [sx objectForKey:@"text"];
             
         }
+        _symptoms = nil;
     }
     
+    NSArray *foodGroups = [self getFoodGroups];
+    if ([foodGroups count] == 0) {
+        foodGroups = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FoodGroups" ofType:@"plist"]];
+        for (NSDictionary *dict in foodGroups) {
+            FoodGroup *foodg = [NSEntityDescription insertNewObjectForEntityForName:@"FoodGroup"
+                                                          inManagedObjectContext:self.managedObjectContext];
+            
+            foodg.gid = [dict objectForKey:@"gid"];
+            foodg.name = [dict objectForKey:@"name"];
+            foodg.notes = [dict objectForKey:@"notes"];
+            foodg.state = @1;
+            
+        }
+        _foodGroups = nil;
+    }
+    
+    NSArray *foods = [self getFoods];
+    if ([foods count] == 0) {
+        foods = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Foods" ofType:@"plist"]];
+        for (NSDictionary *dict in foods) {
+            Food *food = [NSEntityDescription insertNewObjectForEntityForName:@"Food"
+                                                          inManagedObjectContext:self.managedObjectContext];
+            
+            FoodGroup *fg = [self foodGroupByID:[[dict objectForKey:@"gid"] intValue]];
+            food.group = fg;
+            food.foodid = [dict objectForKey:@"foodid"];
+            food.name = [dict objectForKey:@"name"];
+            food.stdlegal = [dict objectForKey:@"stdlegal"];
+            food.notes = [dict objectForKey:@"notes"];
+            food.state = @1;
+            
+        }
+        _foods = nil;
+    }
+
+
     NSError *error = nil;
     [self.managedObjectContext save:&error];
 
@@ -76,6 +119,8 @@
         NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"SXGroup"];
         NSError *error = nil;
         _groups = [self.managedObjectContext executeFetchRequest:request error:&error];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"gid" ascending:YES];
+        _groups = [_groups sortedArrayUsingDescriptors:@[sort]];
         if (error != nil) {
             Alert(@"Data", [error description]);
         }
@@ -95,6 +140,32 @@
     return _symptoms;
 }
 
+- (NSArray*) getFoodGroups {
+    if (_foodGroups == nil) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"FoodGroup"];
+        NSError *error = nil;
+        _foodGroups = [self.managedObjectContext executeFetchRequest:request error:&error];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"gid" ascending:YES];
+        _foodGroups = [_foodGroups sortedArrayUsingDescriptors:@[sort]];
+        if (error != nil) {
+            Alert(@"Data", [error description]);
+        }
+    }
+    return _foodGroups;
+}
+
+- (NSArray*) getFoods {
+    if (_foods == nil) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Food"];
+        NSError *error = nil;
+        _foods = [self.managedObjectContext executeFetchRequest:request error:&error];
+        if (error != nil) {
+            Alert(@"Data", [error description]);
+        }
+    }
+    return _foods;
+}
+
 - (SXGroup*) groupByID:(int) gid {
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gid == %d",gid];
@@ -109,7 +180,43 @@
     return nil;
 }
 
+- (DaySX*) getDaySX:(SXs*)sx date:(NSDate*)date {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"sx == %@ AND date == %@",sx,date];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DaySX"];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *a = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([a count] > 0 && error == nil)
+    {
+        return (DaySX*)[a objectAtIndex:0];
+    }
+    return nil;
+}
 
+- (DaySX*) getLatestDaySX:(SXs*)sx {
+    NSArray *all = [sx.trackeddays allObjects];
+    NSSortDescriptor *byDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *ordered = [all sortedArrayUsingDescriptors:@[byDate]];
+    if ([all count] > 0)
+    {
+        return [ordered objectAtIndex:0];
+    }
+    return nil;
+}
+
+- (FoodGroup*) foodGroupByID:(int) gid {
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"gid == %d",gid];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"FoodGroup"];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *a = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([a count] > 0 && error == nil)
+    {
+        return (FoodGroup*)[a objectAtIndex:0];
+    }
+    return nil;
+}
 
 #pragma mark - Core Data stack
 
@@ -192,5 +299,12 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
+// UTILS
++ (NSDate*) TodayMidnight {
+    NSDate *date = [NSDate date];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    NSUInteger preservedComponents = (NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit);
+    return [calendar dateFromComponents:[calendar components:preservedComponents fromDate:date]];
+}
 
 @end

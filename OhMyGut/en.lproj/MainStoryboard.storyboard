@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="bfr-He-R31">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C3006" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w9Q-CH-jS6">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Main View Controller - Symptoms-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TEo-GD-aWF">
@@ -32,12 +32,16 @@
                                                         <segment title="2"/>
                                                         <segment title="3"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="onValueChanged:" destination="6Wn-ms-fQV" eventType="valueChanged" id="hwV-7z-te7"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="133" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-gG-C8y">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="133" id="0hi-XV-L0u"/>
+                                                        <constraint firstAttribute="height" constant="52" id="LtJ-TO-eyY"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -45,11 +49,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="top" secondItem="6Wn-ms-fQV" secondAttribute="top" constant="13" id="11C-cQ-jYO"/>
-                                            <constraint firstItem="kAa-FC-KWp" firstAttribute="bottom" secondItem="EPt-gG-C8y" secondAttribute="bottom" type="default" id="7UH-Nz-iMy"/>
-                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="top" secondItem="kAa-FC-KWp" secondAttribute="top" type="default" id="Sn9-bB-jC2"/>
+                                            <constraint firstItem="kAa-FC-KWp" firstAttribute="top" secondItem="6Wn-ms-fQV" secondAttribute="top" constant="13" id="KAB-69-bo7"/>
                                             <constraint firstItem="EPt-gG-C8y" firstAttribute="leading" secondItem="6Wn-ms-fQV" secondAttribute="leading" constant="11" id="kTD-fk-yFT"/>
                                             <constraint firstItem="kAa-FC-KWp" firstAttribute="leading" secondItem="EPt-gG-C8y" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="phA-He-GiE"/>
+                                            <constraint firstItem="EPt-gG-C8y" firstAttribute="top" secondItem="6Wn-ms-fQV" secondAttribute="top" constant="9" id="yp5-1g-G9i"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="buttons" destination="kAa-FC-KWp" id="mKh-Ps-4wF"/>
@@ -71,39 +74,55 @@
                             <constraint firstItem="TEo-GD-aWF" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="pTq-Lp-vAu"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Symptoms" id="1mv-44-I0Q"/>
                     <navigationItem key="navigationItem" id="YGO-dh-HuM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="680" y="90"/>
+            <point key="canvasLocation" x="808" y="-214"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rof-PH-iEN">
             <objects>
                 <viewController id="FWS-fj-0vQ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Np-fG-gL0">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PtW-Vd-UAt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFe-Q0-gd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="288"/>
+            <point key="canvasLocation" x="1323" y="446"/>
         </scene>
-        <!--View Controller-->
+        <!--Diet View Controller - Diet-->
         <scene sceneID="Pt4-HP-CEc">
             <objects>
-                <viewController id="DYg-1a-IOw" sceneMemberID="viewController">
+                <viewController id="DYg-1a-IOw" customClass="DietViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FP2-qs-tzW">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Aj-W6v"/>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="Ow5-mx-cd6"/>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="bottom" secondItem="FP2-qs-tzW" secondAttribute="bottom" type="default" id="XT5-eN-Jxe"/>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="lhu-FV-0Xo"/>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="y7m-eW-Jvx"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Diet" id="9kC-dX-hbo"/>
+                    <connections>
+                        <outlet property="scrollView" destination="93H-Aj-W6v" id="TiU-du-OKU"/>
+                        <segue destination="FWS-fj-0vQ" kind="push" id="lXN-SI-BhZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd9-h4-zRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1369" y="1020"/>
+            <point key="canvasLocation" x="823" y="446"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aqs-bh-3hO">
@@ -117,30 +136,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duI-Av-4A8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1365" y="-421"/>
+            <point key="canvasLocation" x="1891" y="-421"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2Rv-FB-NpP">
+        <!--Tab Bar Controller-->
+        <scene sceneID="2pu-iY-P7W">
             <objects>
-                <navigationController navigationBarHidden="YES" id="bfr-He-R31" sceneMemberID="viewController">
+                <tabBarController id="w9Q-CH-jS6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="677-61-40j">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="MIk-hh-LH8">
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
                     <connections>
-                        <segue destination="2" kind="relationship" relationship="rootViewController" id="RFV-4e-OQ6"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="k13-sK-MEP"/>
+                        <segue destination="DYg-1a-IOw" kind="relationship" relationship="viewControllers" id="Gfv-7V-HKC"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="339-Xa-kAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHe-nd-Pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="90"/>
         </scene>
     </scenes>
     <classes>
+        <class className="DietViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DietViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
         <class className="MainViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
         </class>
@@ -150,6 +176,7 @@
         <class className="SXCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SXCell.h"/>
             <relationships>
+                <relationship kind="action" name="onValueChanged:"/>
                 <relationship kind="outlet" name="buttons" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>

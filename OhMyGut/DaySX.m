@@ -1,21 +1,19 @@
 //
-//  SXs.m
+//  DaySX.m
 //  OhMyGut
 //
 //  Created by Juan-Manuel Fluxá on 11/25/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
-#import "SXs.h"
 #import "DaySX.h"
-#import "SXGroup.h"
+#import "SXs.h"
 
 
-@implementation SXs
+@implementation DaySX
 
-@dynamic text;
-@dynamic sxid;
-@dynamic group;
-@dynamic trackeddays;
+@dynamic date;
+@dynamic value;
+@dynamic sx;
 
 @end

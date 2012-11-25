@@ -23,7 +23,8 @@
     self = [super initWithCoder:aDecoder];
     self.sxsByGroup = [NSMutableDictionary dictionary];
     for (SXGroup *group in [[Data shared] getGroups]) {
-        NSArray *a = [group.sxsbygroup allObjects];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"text" ascending:YES];
+        NSArray *a = [[group.sxsbygroup allObjects] sortedArrayUsingDescriptors:@[sort]];
         [self.sxsByGroup setObject:a forKey:group.gid];
     }
     return self;
@@ -59,7 +60,7 @@
     static NSString *identifier = @"sxcell";
     SXCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
 
-    cell.titleLabel.text = sx.text;
+    [cell setSx:sx];
     
     return cell;
     

@@ -3,298 +3,392 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>sxid</key>
+		<integer>0</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Excessive belching, burping or bloating</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>1</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Flatulence</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>2</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Sense of fullness during and after meals</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>3</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Alternating diarrhea and constipation</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>4</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Constipation</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>5</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Diarrhea or loose, unformed stool</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>6</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Abdominal pain</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>7</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Burning sensation in stomach 1-4 hous after eating</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>8</integer>
 		<key>gid</key>
 		<integer>0</integer>
 		<key>text</key>
 		<string>Use antacids</string>
 	</dict>
-    
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>9</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Crave sweets during the day</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>10</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Irritable if meals are missed</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>11</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Need coffee to get started or keep yourself going</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>12</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Eating relieves fatigue</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>13</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Get lightheaded if meals are missed</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>14</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Agitated, easily upset, nervous</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>15</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Fatigue after meals</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>16</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
-		<string>Eating sweets doesn't relieve cravings for sugar</string>
+		<string>Eating sweets doesn&apos;t relieve cravings for sugar</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>17</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Must have sweet after meals</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>18</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Frequent urination</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>19</integer>
 		<key>gid</key>
 		<integer>1</integer>
 		<key>text</key>
 		<string>Increased thirst and appetite</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>20</integer>
 		<key>gid</key>
 		<integer>2</integer>
 		<key>text</key>
 		<string>Difficulty losing weight</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>21</integer>
 		<key>gid</key>
 		<integer>2</integer>
 		<key>text</key>
 		<string>Weight gain even with low-calorie diet</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>22</integer>
 		<key>gid</key>
 		<integer>2</integer>
 		<key>text</key>
 		<string>Waist girth is equal or larger to hip girth</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>23</integer>
 		<key>gid</key>
 		<integer>2</integer>
 		<key>text</key>
 		<string>Accumulation of belly fat</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>24</integer>
 		<key>gid</key>
 		<integer>3</integer>
 		<key>text</key>
 		<string>Tired, sluggish</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>25</integer>
 		<key>gid</key>
 		<integer>3</integer>
 		<key>text</key>
 		<string>Not enough energy to get through the day</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>26</integer>
 		<key>gid</key>
 		<integer>3</integer>
 		<key>text</key>
 		<string>Energy fluctuates throughout the day</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>27</integer>
 		<key>gid</key>
 		<integer>3</integer>
 		<key>text</key>
 		<string>Easily fatigued</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>28</integer>
 		<key>gid</key>
 		<integer>3</integer>
 		<key>text</key>
 		<string>Diminished sex drive</string>
 	</dict>
-    
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>29</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Iniability to concentrate or focus</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>30</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Difficulty remembering things</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>31</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Decreased attention span</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>32</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Depression or lack of motivation</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>33</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Anxiety</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>34</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Insomnia or restless sleep</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>35</integer>
 		<key>gid</key>
 		<integer>4</integer>
 		<key>text</key>
 		<string>Heart palpitations</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>36</integer>
 		<key>gid</key>
 		<integer>5</integer>
 		<key>text</key>
 		<string>Muscle soreness or pain</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>37</integer>
 		<key>gid</key>
 		<integer>5</integer>
 		<key>text</key>
 		<string>Joint soreness or pain</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>38</integer>
 		<key>gid</key>
 		<integer>5</integer>
 		<key>text</key>
 		<string>Decreased joint mobility</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>39</integer>
 		<key>gid</key>
 		<integer>5</integer>
 		<key>text</key>
 		<string>Swelling of joints</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>40</integer>
 		<key>gid</key>
 		<integer>5</integer>
 		<key>text</key>
 		<string>Whole body pain</string>
 	</dict>
-    
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>41</integer>
 		<key>gid</key>
 		<integer>6</integer>
 		<key>text</key>
 		<string>Itchy skin</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>42</integer>
 		<key>gid</key>
 		<integer>6</integer>
 		<key>text</key>
 		<string>Skin rashes (eczema, psoraisis, hives, etc.)</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>43</integer>
 		<key>gid</key>
 		<integer>6</integer>
 		<key>text</key>
 		<string>Dry skin</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>44</integer>
 		<key>gid</key>
 		<integer>6</integer>
 		<key>text</key>
 		<string>Acne breakouts</string>
 	</dict>
-    
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>45</integer>
 		<key>gid</key>
 		<integer>7</integer>
 		<key>text</key>
 		<string>Cough</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>46</integer>
 		<key>gid</key>
 		<integer>7</integer>
 		<key>text</key>
 		<string>Asthma, difficulty breathing</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>47</integer>
 		<key>gid</key>
 		<integer>7</integer>
 		<key>text</key>
 		<string>Sinus congestion</string>
 	</dict>
-    <dict>
+	<dict>
+		<key>sxid</key>
+		<integer>48</integer>
 		<key>gid</key>
 		<integer>7</integer>
 		<key>text</key>

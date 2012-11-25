@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>gid</key>
+		<integer>0</integer>
+		<key>name</key>
+		<string>Meat &amp; Poultry</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>1</integer>
+		<key>name</key>
+		<string>Organ Meats</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>2</integer>
+		<key>name</key>
+		<string>Bone broth</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>3</integer>
+		<key>name</key>
+		<string>Fish</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>4</integer>
+		<key>name</key>
+		<string>Eggs</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>5</integer>
+		<key>name</key>
+		<string>Starchy tubers</string>
+		<key>notes</key>
+		<string></string>
+	</dict>
+</array>
+</plist>

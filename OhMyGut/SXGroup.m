@@ -2,7 +2,7 @@
 //  SXGroup.m
 //  OhMyGut
 //
-//  Created by Juan-Manuel Fluxá on 11/24/12.
+//  Created by Juan-Manuel Fluxá on 11/25/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 

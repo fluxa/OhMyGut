@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "SXGroup.h"
 #import "SXs.h"
+#import "DaySX.h"
+#import "FoodGroup.h"
+#import "Food.h"
 
 @interface Data : NSObject
 
@@ -18,8 +21,14 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
++ (NSDate*) TodayMidnight;
+
 - (NSArray*) getGroups;
 - (NSArray*) getSymptoms;
+- (NSArray*) getFoodGroups;
+- (NSArray*) getFoods;
 - (SXGroup*) groupByID:(int) gid;
+- (DaySX*) getDaySX:(SXs*)sx date:(NSDate*)date;
+- (DaySX*) getLatestDaySX:(SXs*)sx;
 
 @end
