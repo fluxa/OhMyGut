@@ -37,6 +37,8 @@
 		BF56AFB116623D93005B465A /* itemEatingBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AFAE16623D93005B465A /* itemEatingBG.png */; };
 		BF56AFB216623D93005B465A /* itemNotEatingBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AFAF16623D93005B465A /* itemNotEatingBG.png */; };
 		BF56AFB316623D93005B465A /* itemSafeBG.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AFB016623D93005B465A /* itemSafeBG.png */; };
+		BF56AFB61662561B005B465A /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AFB51662561B005B465A /* GroupViewController.m */; };
+		BF56AFB9166258C2005B465A /* FoodScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AFB8166258C1005B465A /* FoodScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,10 @@
 		BF56AFAE16623D93005B465A /* itemEatingBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itemEatingBG.png; path = images/itemEatingBG.png; sourceTree = "<group>"; };
 		BF56AFAF16623D93005B465A /* itemNotEatingBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itemNotEatingBG.png; path = images/itemNotEatingBG.png; sourceTree = "<group>"; };
 		BF56AFB016623D93005B465A /* itemSafeBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = itemSafeBG.png; path = images/itemSafeBG.png; sourceTree = "<group>"; };
+		BF56AFB41662561B005B465A /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		BF56AFB51662561B005B465A /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		BF56AFB7166258C1005B465A /* FoodScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodScrollView.h; sourceTree = "<group>"; };
+		BF56AFB8166258C1005B465A /* FoodScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +195,8 @@
 				BF56AF5F16610399005B465A /* MainViewController.m */,
 				BF56AF95166229F6005B465A /* DietViewController.h */,
 				BF56AF96166229F6005B465A /* DietViewController.m */,
+				BF56AFB41662561B005B465A /* GroupViewController.h */,
+				BF56AFB51662561B005B465A /* GroupViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -201,6 +209,8 @@
 				BF56AFA816622E40005B465A /* FoodItemView.xib */,
 				BF56AFAA16622E58005B465A /* FoodItemView.h */,
 				BF56AFAB16622E58005B465A /* FoodItemView.m */,
+				BF56AFB7166258C1005B465A /* FoodScrollView.h */,
+				BF56AFB8166258C1005B465A /* FoodScrollView.m */,
 			);
 			name = Component;
 			sourceTree = "<group>";
@@ -302,6 +312,8 @@
 				BF56AF9A16622C83005B465A /* FoodGroup.m in Sources */,
 				BF56AF9D16622C83005B465A /* Food.m in Sources */,
 				BF56AFAC16622E58005B465A /* FoodItemView.m in Sources */,
+				BF56AFB61662561B005B465A /* GroupViewController.m in Sources */,
+				BF56AFB9166258C2005B465A /* FoodScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

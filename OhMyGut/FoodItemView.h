@@ -11,5 +11,6 @@
 @interface FoodItemView : UIView
 
 @property (nonatomic,weak) IBOutlet UIButton *button;
+@property (nonatomic,strong) NSManagedObject *managedObject;
 
 @end

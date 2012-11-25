@@ -81,22 +81,78 @@
             </objects>
             <point key="canvasLocation" x="808" y="-214"/>
         </scene>
-        <!--View Controller-->
+        <!--Group View Controller-->
         <scene sceneID="rof-PH-iEN">
             <objects>
-                <viewController id="FWS-fj-0vQ" sceneMemberID="viewController">
+                <viewController id="FWS-fj-0vQ" customClass="GroupViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Np-fG-gL0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-mF-4hB">
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ADP-Uf-ot2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6oj-ZT-lNN">
+                                <segments>
+                                    <segment title="Safe"/>
+                                    <segment title="Eating"/>
+                                    <segment title="Not"/>
+                                </segments>
+                            </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LP9-a7-udn" customClass="FoodScrollView"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhs-ar-ano">
+                                <color key="backgroundColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="ike-ZK-1cy"/>
+                                    <constraint firstAttribute="height" constant="40" id="pj5-rB-sGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onBack:" destination="FWS-fj-0vQ" eventType="touchUpInside" id="uQf-54-8n2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xhs-ar-ano" firstAttribute="top" secondItem="9Np-fG-gL0" secondAttribute="top" type="default" id="1Nf-YO-gkD"/>
+                            <constraint firstItem="MJT-mF-4hB" firstAttribute="trailing" secondItem="9Np-fG-gL0" secondAttribute="trailing" type="default" id="2OQ-IG-WPT"/>
+                            <constraint firstItem="6oj-ZT-lNN" firstAttribute="leading" secondItem="9Np-fG-gL0" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4A8-9q-ZLz"/>
+                            <constraint firstItem="6oj-ZT-lNN" firstAttribute="top" secondItem="MJT-mF-4hB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6a8-KQ-Dbq"/>
+                            <constraint firstItem="xhs-ar-ano" firstAttribute="leading" secondItem="9Np-fG-gL0" secondAttribute="leading" type="default" id="GFd-YQ-veI"/>
+                            <constraint firstItem="LP9-a7-udn" firstAttribute="top" secondItem="6oj-ZT-lNN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MxR-L4-dqB"/>
+                            <constraint firstItem="MJT-mF-4hB" firstAttribute="top" secondItem="9Np-fG-gL0" secondAttribute="top" type="default" id="PWx-Iy-6A8"/>
+                            <constraint firstItem="LP9-a7-udn" firstAttribute="bottom" secondItem="9Np-fG-gL0" secondAttribute="bottom" type="default" id="cQw-pK-3oa"/>
+                            <constraint firstAttribute="trailing" secondItem="6oj-ZT-lNN" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hdV-zs-Wpl"/>
+                            <constraint firstItem="LP9-a7-udn" firstAttribute="leading" secondItem="9Np-fG-gL0" secondAttribute="leading" type="default" id="mTV-cO-GBD"/>
+                            <constraint firstItem="LP9-a7-udn" firstAttribute="trailing" secondItem="9Np-fG-gL0" secondAttribute="trailing" type="default" id="uOk-zf-CCG"/>
+                            <constraint firstItem="6oj-ZT-lNN" firstAttribute="top" secondItem="xhs-ar-ano" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="z7b-xL-ggA"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PtW-Vd-UAt"/>
+                    <connections>
+                        <outlet property="scrollView" destination="LP9-a7-udn" id="4rS-8p-4Mq"/>
+                        <outlet property="stateControl" destination="6oj-ZT-lNN" id="guF-28-4z2"/>
+                        <outlet property="titleLabel" destination="MJT-mF-4hB" id="bcH-Vd-UQW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFe-Q0-gd0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1323" y="446"/>
+            <point key="canvasLocation" x="1849" y="446"/>
         </scene>
-        <!--Diet View Controller - Diet-->
+        <!--Diet View Controller-->
         <scene sceneID="Pt4-HP-CEc">
             <objects>
                 <viewController id="DYg-1a-IOw" customClass="DietViewController" sceneMemberID="viewController">
@@ -104,25 +160,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Aj-W6v"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Aj-W6v" customClass="FoodScrollView"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="What I'm Eating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvn-n6-cFQ">
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="95K-9H-RIe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="6i2-K8-s0a"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="Ow5-mx-cd6"/>
-                            <constraint firstItem="93H-Aj-W6v" firstAttribute="bottom" secondItem="FP2-qs-tzW" secondAttribute="bottom" type="default" id="XT5-eN-Jxe"/>
-                            <constraint firstItem="93H-Aj-W6v" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="lhu-FV-0Xo"/>
+                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="eMs-W5-XfN"/>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="bottom" secondItem="FP2-qs-tzW" secondAttribute="bottom" type="default" id="g8P-FC-2dS"/>
+                            <constraint firstItem="93H-Aj-W6v" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" constant="40" id="m2j-gk-S0U"/>
+                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="qLs-sz-U2S"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="y7m-eW-Jvx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Diet" id="9kC-dX-hbo"/>
+                    <navigationItem key="navigationItem" id="e81-xr-gPw"/>
                     <connections>
                         <outlet property="scrollView" destination="93H-Aj-W6v" id="TiU-du-OKU"/>
-                        <segue destination="FWS-fj-0vQ" kind="push" id="lXN-SI-BhZ"/>
+                        <segue destination="FWS-fj-0vQ" kind="push" identifier="group" id="lXN-SI-BhZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd9-h4-zRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="446"/>
+            <point key="canvasLocation" x="1349" y="446"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aqs-bh-3hO">
@@ -152,19 +220,50 @@
                     </tabBar>
                     <connections>
                         <segue destination="2" kind="relationship" relationship="viewControllers" id="k13-sK-MEP"/>
-                        <segue destination="DYg-1a-IOw" kind="relationship" relationship="viewControllers" id="Gfv-7V-HKC"/>
+                        <segue destination="u1d-bd-riH" kind="relationship" relationship="viewControllers" id="Gfv-7V-HKC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHe-nd-Pjz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="228" y="90"/>
         </scene>
+        <!--Navigation Controller - Diet-->
+        <scene sceneID="EeJ-HH-c1n">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="u1d-bd-riH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diet" id="9kC-dX-hbo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0XZ-7D-sTP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DYg-1a-IOw" kind="relationship" relationship="rootViewController" id="brb-7Q-EAt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taR-Qx-jFS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="446"/>
+        </scene>
     </scenes>
     <classes>
         <class className="DietViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DietViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="FoodScrollView"/>
+            </relationships>
+        </class>
+        <class className="FoodScrollView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodScrollView.h"/>
+        </class>
+        <class className="GroupViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onBack:"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="FoodScrollView"/>
+                <relationship kind="outlet" name="stateControl" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MainViewController" superclassName="UIViewController">

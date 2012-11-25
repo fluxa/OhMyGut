@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoodScrollView.h"
 
 @interface DietViewController : UIViewController
 
-@property (nonatomic,weak) IBOutlet UIScrollView *scrollView;
+@property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
 
 @end
