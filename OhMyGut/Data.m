@@ -8,6 +8,8 @@
 
 #import "Data.h"
 
+#define DIETS_KEY @"dietsKey"
+
 
 @interface Data ()
 {
@@ -15,6 +17,8 @@
     NSArray *_symptoms;
     NSArray *_foodGroups;
     NSArray *_foods;
+    NSMutableDictionary *_filteredFoodGroups;
+    BOOL _filteredGroupsDirty;
 }
 
 @end
@@ -38,9 +42,20 @@
 
 - (id) init {
     self = [super init];
+    self.diets = [[NSUserDefaults standardUserDefaults] objectForKey:DIETS_KEY];
+    if (self.diets == nil) {
+        self.diets = [NSMutableDictionary dictionary];
+    }
+    
     [self managedObjectContext];
     [self loadInitialData];
     return self;
+}
+
+- (void) save {
+    [[NSUserDefaults standardUserDefaults] setObject:self.diets forKey:DIETS_KEY];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    _filteredGroupsDirty = YES;
 }
 
 - (void) loadInitialData {
@@ -98,10 +113,15 @@
             
             FoodGroup *fg = [self foodGroupByID:[[dict objectForKey:@"gid"] intValue]];
             food.group = fg;
-            food.foodid = [dict objectForKey:@"foodid"];
-            food.name = [dict objectForKey:@"name"];
-            food.stdlegal = [dict objectForKey:@"stdlegal"];
-            food.notes = [dict objectForKey:@"notes"];
+            food.foodid = dict[@"foodid"];
+            food.name = dict[@"name"];
+            food.scdlegal = dict[@"scdlegal"];
+            food.gapslegal = dict[@"gapslegal"];
+            food.histamine = dict[@"histamine"];
+            food.fodmaps = dict[@"fodmaps"];
+            food.fiber = dict[@"fiber"];
+            food.goitrogenic = dict[@"goitrogenic"];
+            food.notes = dict[@"notes"];
             food.state = @1;
             
         }
@@ -164,6 +184,28 @@
         }
     }
     return _foods;
+}
+
+- (NSMutableDictionary*) getFilteredFoodGroups {
+    
+    if (_filteredFoodGroups == nil || _filteredGroupsDirty) {
+        _filteredFoodGroups = [NSMutableDictionary dictionary];
+        NSArray *allGroups = [self getFoodGroups];
+        for (FoodGroup *fg in allGroups) {
+            NSMutableArray *foodCanEat = [NSMutableArray array];
+            NSMutableArray *foodCant = [NSMutableArray array];
+            for (Food *food in fg.foods) {
+                if ([food.state intValue] == FOOD_SAFE || [food.state intValue] == FOOD_EATING) {
+                    [foodCanEat addObject:food];
+                } else {
+                    [foodCant addObject:food];
+                }
+            }
+            [_filteredFoodGroups setObject:@[foodCanEat,foodCant] forKey:fg.gid];
+        }
+
+    }
+    return _filteredFoodGroups;
 }
 
 - (SXGroup*) groupByID:(int) gid {

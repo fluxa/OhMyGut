@@ -15,7 +15,7 @@ typedef void(^OnItemClick)(NSManagedObject* obj);
 @interface FoodScrollView : UIScrollView
 
 @property (nonatomic,strong) NSArray *items;
-@property (nonatomic,copy) OnItemClick clickBlock;
+@property (nonatomic,copy) OnItemClick onItemClick;
 
 - (void) render;
 - (void) clean;

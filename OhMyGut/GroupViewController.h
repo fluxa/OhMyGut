@@ -13,7 +13,7 @@
 
 @interface GroupViewController : UIViewController
 
-@property (nonatomic,weak) IBOutlet UISegmentedControl *stateControl;
+@property (nonatomic,assign) BOOL renderEating;
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
 

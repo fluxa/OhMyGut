@@ -50,5 +50,13 @@
 		<key>notes</key>
 		<string></string>
 	</dict>
+    <dict>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>name</key>
+		<string>SCD ILLEGAL</string>
+		<key>notes</key>
+		<string>test group all SCD illegal</string>
+	</dict>
 </array>
 </plist>

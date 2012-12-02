@@ -16,6 +16,8 @@
 
 @interface DietViewController ()
 
+@property (nonatomic,assign) BOOL renderEating;
+
 @end
 
 @implementation DietViewController
@@ -32,14 +34,57 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    NSArray *items = [[Data shared] getFoodGroups];
+	self.renderEating = YES;
+    if ([[Data shared].diets count] == 0) {
+        [self performSegueWithIdentifier:@"settings" sender:nil];
+    }
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self renderView];
+}
+
+- (void) renderView {
+    
+    if (self.renderEating) {
+        self.titleLabel.text = @"What I'm eating";
+        [self.renderButton setTitle:@"NOT" forState:UIControlStateNormal];
+    } else {
+        self.titleLabel.text = @"What I'm NOT eating";
+        [self.renderButton setTitle:@"YES" forState:UIControlStateNormal];
+    }
+    
+    NSMutableDictionary *filtered = [[Data shared] getFilteredFoodGroups];
+    NSMutableArray *items = [NSMutableArray array];
+    for (FoodGroup *fg in [[Data shared] getFoodGroups]) {
+        NSArray *dupla = [filtered objectForKey:fg.gid];
+        //0 yeah can
+        //1 cannot
+        if (self.renderEating) {
+            if ([dupla[0] count] > 0) {
+                [items addObject:fg];
+            }
+        } else {
+            if ([dupla[1] count] > 0) {
+                [items addObject:fg];
+            }
+        }
+    }
     self.scrollView.items = items;
     [self.scrollView render];
-    [self.scrollView setClickBlock:^(NSManagedObject* obj){
+    [self.scrollView setOnItemClick:^(NSManagedObject* obj){
         FoodGroup *fg = (FoodGroup*)obj;
         [self performSegueWithIdentifier:@"group" sender:fg];
     }];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.scrollView.alpha = 1;
+    } completion:^(BOOL finished) {
+        
+    }];
+
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,9 +94,27 @@
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    GroupViewController *gvc = segue.destinationViewController;
-    gvc.foodGroup = sender;
+    if ([segue.identifier isEqualToString:@"group"]) {
+        GroupViewController *gvc = segue.destinationViewController;
+        gvc.renderEating = self.renderEating;
+        gvc.foodGroup = sender;
+    }
+    
 }
 
+- (IBAction)onSettings:(id)sender {
+    [self performSegueWithIdentifier:@"settings" sender:nil];
+}
+
+- (IBAction)onRender:(id)sender {
+    
+    self.renderEating = !self.renderEating;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.scrollView.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self renderView];
+    }];
+}
 
 @end

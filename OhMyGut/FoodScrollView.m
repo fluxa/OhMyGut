@@ -96,7 +96,7 @@
 
 - (void) onItemClick:(id)sender {
     FoodItemView *item = (FoodItemView*)[sender superview];
-    self.clickBlock(item.managedObject);
+    self.onItemClick(item.managedObject);
 }
 
 @end

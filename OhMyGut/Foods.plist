@@ -9,7 +9,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Beef</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -21,7 +31,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Chicken</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -33,7 +53,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Pork</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -45,7 +75,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Lamb</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -57,7 +97,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Turkey</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -69,7 +119,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Duck</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -81,7 +141,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Wild game</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -93,7 +163,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Bacon</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -105,7 +185,17 @@
 		<integer>0</integer>
 		<key>name</key>
 		<string>Ham</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -117,7 +207,17 @@
 		<integer>1</integer>
 		<key>name</key>
 		<string>Liver</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -129,7 +229,17 @@
 		<integer>1</integer>
 		<key>name</key>
 		<string>Tongue</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -141,7 +251,17 @@
 		<integer>1</integer>
 		<key>name</key>
 		<string>Oxtail</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -153,7 +273,17 @@
 		<integer>1</integer>
 		<key>name</key>
 		<string>Kidney</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -165,7 +295,17 @@
 		<integer>2</integer>
 		<key>name</key>
 		<string>Any</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -177,7 +317,17 @@
 		<integer>3</integer>
 		<key>name</key>
 		<string>Salmon</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -189,7 +339,17 @@
 		<integer>3</integer>
 		<key>name</key>
 		<string>Mackerel</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -201,7 +361,17 @@
 		<integer>3</integer>
 		<key>name</key>
 		<string>Herring</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -213,7 +383,17 @@
 		<integer>3</integer>
 		<key>name</key>
 		<string>Shellfish</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -225,7 +405,17 @@
 		<integer>4</integer>
 		<key>name</key>
 		<string>Egg</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -237,8 +427,18 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Yams</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>
@@ -249,8 +449,18 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Sweet potatoes</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>
@@ -261,8 +471,18 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Yucca/Manioc</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>
@@ -273,8 +493,18 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Taro</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>
@@ -285,7 +515,17 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Butternut squash</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -297,7 +537,17 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Rutabaga</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
+		<true/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
 		<true/>
 		<key>notes</key>
 		<string></string>
@@ -309,8 +559,18 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Plantains</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>
@@ -321,8 +581,62 @@
 		<integer>5</integer>
 		<key>name</key>
 		<string>Parsnips</string>
-		<key>stdlegal</key>
+		<key>scdlegal</key>
 		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>foodid</key>
+		<integer>27</integer>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>name</key>
+		<string>HotDog</string>
+		<key>scdlegal</key>
+		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
+		<key>notes</key>
+		<string></string>
+	</dict>
+    <dict>
+		<key>foodid</key>
+		<integer>28</integer>
+		<key>gid</key>
+		<integer>6</integer>
+		<key>name</key>
+		<string>Lemon Pie</string>
+		<key>scdlegal</key>
+		<false/>
+        <key>gapslegal</key>
+		<true/>
+        <key>histamine</key>
+		<true/>
+        <key>fodmaps</key>
+		<true/>
+        <key>fiber</key>
+		<true/>
+        <key>goitrogenic</key>
+		<true/>
 		<key>notes</key>
 		<string></string>
 	</dict>

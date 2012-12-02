@@ -6,11 +6,16 @@
         <relationship name="sx" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SXs" inverseName="trackeddays" inverseEntity="SXs" syncable="YES"/>
     </entity>
     <entity name="Food" representedClassName="Food" syncable="YES">
+        <attribute name="fiber" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="fodmaps" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="foodid" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="gapslegal" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="goitrogenic" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="histamine" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="notes" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scdlegal" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
-        <attribute name="stdlegal" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodGroup" inverseName="foods" inverseEntity="FoodGroup" syncable="YES"/>
     </entity>
     <entity name="FoodGroup" representedClassName="FoodGroup" syncable="YES">
@@ -32,10 +37,10 @@
         <relationship name="trackeddays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaySX" inverseName="sx" inverseEntity="DaySX" syncable="YES"/>
     </entity>
     <elements>
+        <element name="DaySX" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Food" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="FoodGroup" positionX="160" positionY="192" width="128" height="120"/>
         <element name="SXGroup" positionX="160" positionY="192" width="128" height="90"/>
         <element name="SXs" positionX="160" positionY="192" width="128" height="105"/>
-        <element name="DaySX" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="FoodGroup" positionX="160" positionY="192" width="128" height="120"/>
-        <element name="Food" positionX="160" positionY="192" width="128" height="135"/>
     </elements>
 </model>

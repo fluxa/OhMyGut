@@ -2,7 +2,7 @@
 //  Food.m
 //  OhMyGut
 //
-//  Created by Juan-Manuel Fluxá on 11/25/12.
+//  Created by Juan-Manuel Fluxá on 12/1/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
@@ -14,9 +14,14 @@
 
 @dynamic foodid;
 @dynamic name;
-@dynamic stdlegal;
 @dynamic notes;
 @dynamic state;
+@dynamic scdlegal;
+@dynamic gapslegal;
+@dynamic histamine;
+@dynamic fodmaps;
+@dynamic fiber;
+@dynamic goitrogenic;
 @dynamic group;
 
 @end
