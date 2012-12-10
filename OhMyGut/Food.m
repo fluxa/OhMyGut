@@ -2,26 +2,28 @@
 //  Food.m
 //  OhMyGut
 //
-//  Created by Juan-Manuel Fluxá on 12/1/12.
+//  Created by Juan-Manuel Fluxá on 12/8/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
 #import "Food.h"
+#import "DayFood.h"
 #import "FoodGroup.h"
 
 
 @implementation Food
 
+@dynamic fiber;
+@dynamic fodmaps;
 @dynamic foodid;
+@dynamic gapslegal;
+@dynamic goitrogenic;
+@dynamic histamine;
 @dynamic name;
 @dynamic notes;
-@dynamic state;
 @dynamic scdlegal;
-@dynamic gapslegal;
-@dynamic histamine;
-@dynamic fodmaps;
-@dynamic fiber;
-@dynamic goitrogenic;
+@dynamic state;
 @dynamic group;
+@dynamic tracked;
 
 @end

@@ -1,0 +1,55 @@
+script(type='text/javascript', src='/js/jquery-1.8.2.min.js')
+script(type='text/javascript', src='/js/bootstrap.min.js')
+script(type='text/javascript', src='/js/spin.min.js')
+script(type='text/javascript')
+	alerts = function(){};
+	alerts.error = function(message){
+		if($('#alerts'))
+		{
+			$('#alerts').html("<div class='alert alert-error fade in' onclick='$(\".alert\").alert(\"close\");'><button type='button' class='close' data-dismiss='alert'>×</button>"+message+"</div>");
+			
+		}
+	}
+
+	alerts.info = function(message){
+		if($('#alerts')){
+			$('#alerts').html("<div class='alert alert-info fade in' onclick='$(\".alert\").alert(\"close\");'><button type='button' class='close' data-dismiss='alert'>×</button>"+message+"</div>");
+		}
+	}
+
+	alerts.success = function(message){
+		if($('#alerts')){
+			$('#alerts').html("<div class='alert alert-success fade in' onclick='$(\".alert\").alert(\"close\");'><button type='button' class='close' data-dismiss='alert'>×</button>"+message+"</div>");
+		}
+	}
+
+	var opts = {
+		lines: 13, // The number of lines to draw
+		length: 7, // The length of each line
+		width: 4, // The line thickness
+		radius: 15, // The radius of the inner circle
+		corners: 1, // Corner roundness (0..1)
+		rotate: 0, // The rotation offset
+		color: '#000', // #rgb or #rrggbb
+		speed: 1, // Rounds per second
+		trail: 60, // Afterglow percentage
+		shadow: false, // Whether to render a shadow
+		hwaccel: false, // Whether to use hardware acceleration
+		className: 'spinner', // The CSS class to assign to the spinner
+		zIndex: 2e9, // The z-index (defaults to 2000000000)
+		top: 'auto', // Top position relative to parent in px
+		left: 'auto' // Left position relative to parent in px
+		};
+	var target = document.getElementById('wrap');
+	var spinner = new Spinner(opts);
+	spin = {
+		start : function(){
+			var target = document.getElementById('wrap');
+			spinner.spin(target);
+		},
+		stop : function() {
+			spinner.stop();
+		}
+	}
+
+

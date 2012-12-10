@@ -1,0 +1,24 @@
+script(type='text/javascript')
+
+	function updateData(from) {
+		
+		spin.start();
+
+		$.get('/'+from,function(data){
+			spin.stop();
+			if(data.success) {
+				alerts.success(data.info);
+			} else {
+				alerts.error('Error: ' + error);
+			};
+		});
+	};
+
+	//onready
+	$(function(){
+
+	
+	});
+
+
+

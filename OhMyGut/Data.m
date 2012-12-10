@@ -17,6 +17,7 @@
     NSArray *_symptoms;
     NSArray *_foodGroups;
     NSArray *_foods;
+    NSArray *_diets;
     NSMutableDictionary *_filteredFoodGroups;
     BOOL _filteredGroupsDirty;
 }
@@ -42,18 +43,19 @@
 
 - (id) init {
     self = [super init];
-    self.diets = [[NSUserDefaults standardUserDefaults] objectForKey:DIETS_KEY];
-    if (self.diets == nil) {
-        self.diets = [NSMutableDictionary dictionary];
+    self.myDiets = [[NSUserDefaults standardUserDefaults] objectForKey:DIETS_KEY];
+    if (self.myDiets == nil) {
+        self.myDiets = [NSMutableDictionary dictionary];
     }
     
     [self managedObjectContext];
     [self loadInitialData];
+    [self updateDailyFoods];
     return self;
 }
 
 - (void) save {
-    [[NSUserDefaults standardUserDefaults] setObject:self.diets forKey:DIETS_KEY];
+    [[NSUserDefaults standardUserDefaults] setObject:self.myDiets forKey:DIETS_KEY];
     [[NSUserDefaults standardUserDefaults] synchronize];
     _filteredGroupsDirty = YES;
 }
@@ -127,11 +129,77 @@
         }
         _foods = nil;
     }
+    
+    NSArray *diets = [self getDiets];
+    if ([diets count] == 0) {
+        diets = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"Diets" ofType:@"plist"]];
+        for (NSDictionary *dict in diets) {
+            Diet *diet = [NSEntityDescription insertNewObjectForEntityForName:@"Diet"
+                                                       inManagedObjectContext:self.managedObjectContext];
+            
+            diet.dietid = dict[@"dietid"];
+            diet.name = dict[@"name"];
+            
+        }
+        _diets = nil;
+    }
 
 
     NSError *error = nil;
     [self.managedObjectContext save:&error];
 
+}
+
+- (void) updateDailyFoods {
+    NSArray *allfood = [self getFoods];
+    for (Food *food in allfood) {
+        
+        NSDate *today = [Data TodayMidnight];
+        DayFood *df = [self getLatestDayFood:food];
+        if (df == nil) {
+            //first
+            df = [NSEntityDescription insertNewObjectForEntityForName:@"DayFood"
+                                               inManagedObjectContext:self.managedObjectContext];
+            df.food = food;
+            df.state = food.state;
+            df.date = today;
+            
+        } else {
+            
+            if (df.state != food.state) {
+                NSTimeInterval t = [df.date timeIntervalSinceDate:today];
+                if (t == 0) {
+                    NSLog(@"%@ changed from %d to %d, saved for sameday",food.name,df.state.intValue,food.state.intValue);
+                    df.state = food.state;
+                } else {
+                    NSLog(@"%@ changed from %d to %d, saved for new day",food.name,df.state.intValue,food.state.intValue);
+                    DayFood *newdf = [NSEntityDescription insertNewObjectForEntityForName:@"DayFood"
+                                                       inManagedObjectContext:self.managedObjectContext];
+                    newdf.food = food;
+                    newdf.state = food.state;
+                    newdf.date = today;
+                }
+                
+                
+            }
+        }
+    }
+    NSError *error = nil;
+    [self.managedObjectContext save:&error];
+}
+
+- (NSArray*) getDiets {
+    if (_diets == nil) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Diet"];
+        NSError *error = nil;
+        _diets = [self.managedObjectContext executeFetchRequest:request error:&error];
+        NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"dietid" ascending:YES];
+        _diets = [_groups sortedArrayUsingDescriptors:@[sort]];
+        if (error != nil) {
+            Alert(@"Data", [error description]);
+        }
+    }
+    return _diets;
 }
 
 - (NSArray*) getGroups {
@@ -256,6 +324,31 @@
     if ([a count] > 0 && error == nil)
     {
         return (FoodGroup*)[a objectAtIndex:0];
+    }
+    return nil;
+}
+
+- (DayFood*) getDayFood:(Food*)food date:(NSDate*)date {
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"food == %@ AND date == %@",food,date];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DayFood"];
+    [request setPredicate:predicate];
+    NSError *error = nil;
+    NSArray *a = [self.managedObjectContext executeFetchRequest:request error:&error];
+    if ([a count] > 0 && error == nil)
+    {
+        return (DayFood*)[a objectAtIndex:0];
+    }
+    return nil;
+}
+
+- (DayFood*) getLatestDayFood:(Food*)food {
+    NSArray *all = [food.tracked allObjects];
+    NSSortDescriptor *byDate = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSArray *ordered = [all sortedArrayUsingDescriptors:@[byDate]];
+    if ([all count] > 0)
+    {
+        return [ordered objectAtIndex:0];
     }
     return nil;
 }

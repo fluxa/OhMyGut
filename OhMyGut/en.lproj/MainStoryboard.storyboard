@@ -153,17 +153,20 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93H-Aj-W6v" customClass="FoodScrollView"/>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvn-n6-cFQ">
                                 <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="182" id="nAr-jY-0Yo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh2-m9-Z1a">
-                                <color key="backgroundColor" red="1" green="0.054327862769999999" blue="0.65425989610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.67450980390000004" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="ayF-Qb-mdS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="NOT">
+                                <state key="normal" title="Not">
                                     <color key="titleColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -172,6 +175,23 @@
                                 </state>
                                 <connections>
                                     <action selector="onRender:" destination="DYg-1a-IOw" eventType="touchUpInside" id="VFm-wK-fRH"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWj-rI-geQ">
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.58823529409999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="00I-na-caX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Foods">
+                                    <color key="titleColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onRenderAll:" destination="DYg-1a-IOw" eventType="touchUpInside" id="kNK-Nr-s9x"/>
                                 </connections>
                             </button>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvt-kX-H36">
@@ -195,28 +215,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="dvt-kX-H36" firstAttribute="bottom" secondItem="pvn-n6-cFQ" secondAttribute="bottom" type="default" id="1CV-fh-J2K"/>
+                            <constraint firstItem="AWj-rI-geQ" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="42P-Hl-sth"/>
                             <constraint firstItem="pvn-n6-cFQ" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="6i2-K8-s0a"/>
                             <constraint firstItem="Uh2-m9-Z1a" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="Av2-SO-tyO"/>
-                            <constraint firstItem="Uh2-m9-Z1a" firstAttribute="bottom" secondItem="dvt-kX-H36" secondAttribute="bottom" type="default" id="NtT-OK-pMH"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="Ow5-mx-cd6"/>
-                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="eMs-W5-XfN"/>
+                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" constant="46" id="TGz-pM-x8k"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="bottom" secondItem="FP2-qs-tzW" secondAttribute="bottom" type="default" id="g8P-FC-2dS"/>
+                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="bottom" secondItem="dvt-kX-H36" secondAttribute="bottom" type="default" id="j4Z-aU-pck"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" constant="40" id="m2j-gk-S0U"/>
                             <constraint firstItem="dvt-kX-H36" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="n3E-Ji-3zV"/>
                             <constraint firstItem="Uh2-m9-Z1a" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="pss-mL-Sxw"/>
-                            <constraint firstItem="pvn-n6-cFQ" firstAttribute="leading" secondItem="FP2-qs-tzW" secondAttribute="leading" type="default" id="qLs-sz-U2S"/>
+                            <constraint firstItem="AWj-rI-geQ" firstAttribute="bottom" secondItem="Uh2-m9-Z1a" secondAttribute="bottom" type="default" id="qo9-ga-enW"/>
                             <constraint firstItem="dvt-kX-H36" firstAttribute="top" secondItem="FP2-qs-tzW" secondAttribute="top" type="default" id="r1w-fC-uL9"/>
+                            <constraint firstAttribute="trailing" secondItem="AWj-rI-geQ" secondAttribute="trailing" constant="46" id="u99-Ip-Kz6"/>
+                            <constraint firstItem="AWj-rI-geQ" firstAttribute="bottom" secondItem="pvn-n6-cFQ" secondAttribute="bottom" type="default" id="v1O-SP-PN3"/>
                             <constraint firstItem="93H-Aj-W6v" firstAttribute="trailing" secondItem="FP2-qs-tzW" secondAttribute="trailing" type="default" id="y7m-eW-Jvx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="e81-xr-gPw"/>
                     <connections>
+                        <outlet property="renderAllButton" destination="AWj-rI-geQ" id="iGT-XH-DJo"/>
                         <outlet property="renderButton" destination="Uh2-m9-Z1a" id="cub-bq-irJ"/>
                         <outlet property="scrollView" destination="93H-Aj-W6v" id="TiU-du-OKU"/>
                         <outlet property="titleLabel" destination="pvn-n6-cFQ" id="6Nx-Uc-d3q"/>
                         <segue destination="FWS-fj-0vQ" kind="push" identifier="group" id="lXN-SI-BhZ"/>
                         <segue destination="97Z-kA-efG" kind="modal" identifier="settings" id="Yyg-lx-v2z"/>
+                        <segue destination="02V-S7-BZK" kind="push" identifier="food" id="TEu-fu-cYD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd9-h4-zRa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -351,7 +375,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqG-FL-sec">
                                 <color key="backgroundColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="XvO-Ir-HTU"/>
+                                    <constraint firstAttribute="height" constant="40" id="0l4-sI-pja"/>
                                     <constraint firstAttribute="width" constant="40" id="g6t-sB-DmN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -366,38 +390,139 @@
                                     <action selector="onBack:" destination="02V-S7-BZK" eventType="touchUpInside" id="ftR-hT-RCF"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42h-8e-VBz">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z18-qi-5HZ" customClass="FoodScrollView"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do em odioque civiuda." translatesAutoresizingMaskIntoConstraints="NO" id="42h-8e-VBz">
+                                <color key="backgroundColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="jCw-vp-pAI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="02V-S7-BZK" id="vD1-vW-9Lo"/>
+                                </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glW-o4-dkh">
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="63T-RP-RWT"/>
+                                    <constraint firstAttribute="height" constant="44" id="qBW-AQ-ijd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onEdit:" destination="02V-S7-BZK" eventType="touchUpInside" id="qeK-wl-CZG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Z18-qi-5HZ" firstAttribute="top" secondItem="PeF-Sw-VTb" secondAttribute="top" constant="100" id="5oW-Ts-Wne"/>
                             <constraint firstItem="mcL-2t-KEs" firstAttribute="top" secondItem="PeF-Sw-VTb" secondAttribute="top" type="default" id="9KR-Iz-26L"/>
                             <constraint firstItem="mvB-Mg-B9A" firstAttribute="top" secondItem="TqG-FL-sec" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FsL-Ps-z1O"/>
                             <constraint firstItem="42h-8e-VBz" firstAttribute="trailing" secondItem="PeF-Sw-VTb" secondAttribute="trailing" type="default" id="Hrv-v3-zYR"/>
+                            <constraint firstItem="glW-o4-dkh" firstAttribute="bottom" secondItem="42h-8e-VBz" secondAttribute="bottom" type="default" id="Mn1-av-0hQ"/>
                             <constraint firstItem="TqG-FL-sec" firstAttribute="top" secondItem="PeF-Sw-VTb" secondAttribute="top" type="default" id="RHQ-ev-RdM"/>
                             <constraint firstAttribute="trailing" secondItem="mvB-Mg-B9A" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="SFg-4S-IkP"/>
                             <constraint firstItem="mvB-Mg-B9A" firstAttribute="top" secondItem="mcL-2t-KEs" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="SLl-rb-Ckt"/>
                             <constraint firstItem="mvB-Mg-B9A" firstAttribute="leading" secondItem="PeF-Sw-VTb" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Tk9-h2-cud"/>
+                            <constraint firstAttribute="bottom" secondItem="glW-o4-dkh" secondAttribute="bottom" constant="1" id="UWW-33-qej"/>
+                            <constraint firstItem="Z18-qi-5HZ" firstAttribute="leading" secondItem="PeF-Sw-VTb" secondAttribute="leading" type="default" id="W4H-SE-zLs"/>
                             <constraint firstItem="TqG-FL-sec" firstAttribute="leading" secondItem="PeF-Sw-VTb" secondAttribute="leading" type="default" id="XuC-GW-c2u"/>
-                            <constraint firstItem="42h-8e-VBz" firstAttribute="bottom" secondItem="PeF-Sw-VTb" secondAttribute="bottom" type="default" id="iNB-Cc-ZDm"/>
-                            <constraint firstItem="42h-8e-VBz" firstAttribute="top" secondItem="mvB-Mg-B9A" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="qBx-go-ET2"/>
+                            <constraint firstAttribute="bottom" secondItem="Z18-qi-5HZ" secondAttribute="bottom" constant="161" id="fMX-ir-DMm"/>
+                            <constraint firstItem="Z18-qi-5HZ" firstAttribute="trailing" secondItem="PeF-Sw-VTb" secondAttribute="trailing" type="default" id="fjI-Vt-bat"/>
+                            <constraint firstItem="glW-o4-dkh" firstAttribute="leading" secondItem="PeF-Sw-VTb" secondAttribute="leading" type="default" id="hee-Gp-Dfl"/>
                             <constraint firstItem="mcL-2t-KEs" firstAttribute="trailing" secondItem="PeF-Sw-VTb" secondAttribute="trailing" type="default" id="w0W-BY-zXb"/>
                             <constraint firstItem="42h-8e-VBz" firstAttribute="leading" secondItem="PeF-Sw-VTb" secondAttribute="leading" type="default" id="xd4-e0-eEb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aJh-E8-7lj"/>
                     <connections>
+                        <outlet property="scrollView" destination="Z18-qi-5HZ" id="Yvp-Fc-uny"/>
                         <outlet property="stateControl" destination="mvB-Mg-B9A" id="Tft-Ia-l1J"/>
+                        <outlet property="textView" destination="42h-8e-VBz" id="8OL-RA-BcO"/>
                         <outlet property="titleLabel" destination="mcL-2t-KEs" id="9xR-7N-XnQ"/>
+                        <segue destination="VNU-as-sru" kind="modal" identifier="editnotes" modalTransitionStyle="flipHorizontal" id="hQ8-OK-Biz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9w-tb-Jwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2345" y="430"/>
+            <point key="canvasLocation" x="1897" y="1198"/>
+        </scene>
+        <!--Edit Notes View Controller-->
+        <scene sceneID="SAj-wY-JOQ">
+            <objects>
+                <viewController id="VNU-as-sru" customClass="EditNotesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVa-z1-RPi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do em odioque civiuda." translatesAutoresizingMaskIntoConstraints="NO" id="QDA-4J-Eoh">
+                                <color key="backgroundColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="277" id="EDt-l6-wFz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="alphabet"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VNU-as-sru" id="axb-CZ-8NB"/>
+                                </connections>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jip-Bz-o46">
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.97254901959999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="ZUo-4j-94r"/>
+                                    <constraint firstAttribute="height" constant="40" id="lIS-r5-h9P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGe-tJ-Hya">
+                                <color key="backgroundColor" red="1" green="0.88315544609999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="MaP-2D-5ae"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="done">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDone:" destination="VNU-as-sru" eventType="touchUpInside" id="sQs-Fk-N1w"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jip-Bz-o46" firstAttribute="top" secondItem="rVa-z1-RPi" secondAttribute="top" type="default" id="2jv-mx-qeZ"/>
+                            <constraint firstItem="QDA-4J-Eoh" firstAttribute="top" secondItem="rVa-z1-RPi" secondAttribute="top" constant="41" id="ADe-nu-SU2"/>
+                            <constraint firstItem="Jip-Bz-o46" firstAttribute="leading" secondItem="rVa-z1-RPi" secondAttribute="leading" type="default" id="JvP-bL-Uiq"/>
+                            <constraint firstItem="QDA-4J-Eoh" firstAttribute="trailing" secondItem="rVa-z1-RPi" secondAttribute="trailing" type="default" id="OE7-Ee-ZJ7"/>
+                            <constraint firstItem="ZGe-tJ-Hya" firstAttribute="bottom" secondItem="Jip-Bz-o46" secondAttribute="bottom" type="default" id="d9H-3i-MBJ"/>
+                            <constraint firstItem="QDA-4J-Eoh" firstAttribute="leading" secondItem="rVa-z1-RPi" secondAttribute="leading" type="default" id="dPE-zx-oKf"/>
+                            <constraint firstItem="ZGe-tJ-Hya" firstAttribute="trailing" secondItem="rVa-z1-RPi" secondAttribute="trailing" type="default" id="k0R-we-d1S"/>
+                            <constraint firstItem="ZGe-tJ-Hya" firstAttribute="top" secondItem="rVa-z1-RPi" secondAttribute="top" type="default" id="odo-IR-DBA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VBH-bk-K9v"/>
+                    <connections>
+                        <outlet property="textView" destination="QDA-4J-Eoh" id="9rp-gr-Anz"/>
+                        <outlet property="titleLabel" destination="Jip-Bz-o46" id="iD3-NN-vTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4J2-NN-f8J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863" y="415"/>
         </scene>
     </scenes>
     <classes>
@@ -412,9 +537,19 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DietViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onRender:"/>
+                <relationship kind="action" name="onRenderAll:"/>
                 <relationship kind="action" name="onSettings:"/>
+                <relationship kind="outlet" name="renderAllButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="renderButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="FoodScrollView"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="EditNotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EditNotesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="onDone:"/>
+                <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
@@ -425,7 +560,9 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FoodViewController.h"/>
             <relationships>
                 <relationship kind="action" name="onBack:"/>
+                <relationship kind="action" name="onEdit:"/>
                 <relationship kind="action" name="onValueChanged:"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="FoodScrollView"/>
                 <relationship kind="outlet" name="stateControl" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="textView" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
@@ -459,4 +596,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="TEu-fu-cYD"/>
+    </inferredMetricsTieBreakers>
 </document>

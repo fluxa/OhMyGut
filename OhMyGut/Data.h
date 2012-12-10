@@ -12,6 +12,9 @@
 #import "DaySX.h"
 #import "FoodGroup.h"
 #import "Food.h"
+#import "DayFood.h"
+#import "Diet.h"
+
 #define DIETS_IDS @[@"scdlegal",@"gapslegal",@"histamine",@"fodmaps",@"fiber",@"goitrogenic"]
 #define FOOD_SAFE 0
 #define FOOD_EATING 1
@@ -24,11 +27,12 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic,strong) NSMutableDictionary *diets;
+@property (nonatomic,strong) NSMutableDictionary *myDiets;
 
 + (NSDate*) TodayMidnight;
 
 - (void) save;
+- (void) updateDailyFoods;
 - (NSArray*) getGroups;
 - (NSArray*) getSymptoms;
 - (NSArray*) getFoodGroups;
@@ -37,5 +41,7 @@
 - (SXGroup*) groupByID:(int) gid;
 - (DaySX*) getDaySX:(SXs*)sx date:(NSDate*)date;
 - (DaySX*) getLatestDaySX:(SXs*)sx;
+- (DayFood*) getDayFood:(Food*)food date:(NSDate*)date;
+
 
 @end

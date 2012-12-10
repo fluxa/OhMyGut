@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DayFood" representedClassName="DayFood" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="food" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Food" inverseName="tracked" inverseEntity="Food" syncable="YES"/>
+    </entity>
     <entity name="DaySX" representedClassName="DaySX" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="sx" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SXs" inverseName="trackeddays" inverseEntity="SXs" syncable="YES"/>
+    </entity>
+    <entity name="Diet" representedClassName="Diet" syncable="YES">
+        <attribute name="dietid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Food" representedClassName="Food" syncable="YES">
         <attribute name="fiber" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -17,6 +26,7 @@
         <attribute name="scdlegal" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
         <relationship name="group" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="FoodGroup" inverseName="foods" inverseEntity="FoodGroup" syncable="YES"/>
+        <relationship name="tracked" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DayFood" inverseName="food" inverseEntity="DayFood" syncable="YES"/>
     </entity>
     <entity name="FoodGroup" representedClassName="FoodGroup" syncable="YES">
         <attribute name="gid" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
@@ -37,10 +47,12 @@
         <relationship name="trackeddays" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DaySX" inverseName="sx" inverseEntity="DaySX" syncable="YES"/>
     </entity>
     <elements>
+        <element name="DayFood" positionX="160" positionY="192" width="128" height="90"/>
         <element name="DaySX" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Food" positionX="160" positionY="192" width="128" height="210"/>
+        <element name="Food" positionX="160" positionY="192" width="128" height="225"/>
         <element name="FoodGroup" positionX="160" positionY="192" width="128" height="120"/>
         <element name="SXGroup" positionX="160" positionY="192" width="128" height="90"/>
         <element name="SXs" positionX="160" positionY="192" width="128" height="105"/>
+        <element name="Diet" positionX="160" positionY="192" width="128" height="75"/>
     </elements>
 </model>

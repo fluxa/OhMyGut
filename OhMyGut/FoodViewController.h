@@ -16,6 +16,7 @@
 @property (nonatomic,weak) IBOutlet UISegmentedControl *stateControl;
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet UITextView *textView;
+@property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
 @property (nonatomic,strong) Food *food;
 
 @end

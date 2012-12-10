@@ -1,0 +1,14 @@
+--- 
+applications: 
+  .: 
+    mem: 64M
+    framework: 
+      name: node
+      info: 
+        mem: 64M
+        description: Node.js Application
+        exec: 
+    name: ohmygut
+    instances: 1
+    url: ${name}.${target-base}
+    infra: ap-aws

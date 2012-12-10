@@ -13,6 +13,7 @@
 
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet UIButton *renderButton;
+@property (nonatomic,weak) IBOutlet UIButton *renderAllButton;
 @property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
 
 @end

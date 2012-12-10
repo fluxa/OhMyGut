@@ -95,8 +95,10 @@
 }
 
 - (void) onItemClick:(id)sender {
-    FoodItemView *item = (FoodItemView*)[sender superview];
-    self.onItemClick(item.managedObject);
+    if (self.onItemClick != nil) {
+        FoodItemView *item = (FoodItemView*)[sender superview];
+        self.onItemClick(item.managedObject);
+    }
 }
 
 @end

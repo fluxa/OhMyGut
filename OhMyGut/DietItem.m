@@ -16,14 +16,14 @@
 - (void) setDietID:(NSString *)dietID {
     _dietID = dietID;
     self.nameLabel.text = dietID;
-    BOOL isOn = [[[Data shared].diets objectForKey:_dietID] boolValue] || NO;
+    BOOL isOn = [[[Data shared].myDiets objectForKey:_dietID] boolValue] || NO;
     self.switchControl.on = isOn;
 }
 
 - (IBAction)onValueChanged:(id)sender {
     BOOL isOn = self.switchControl.on;
     
-    [[Data shared].diets setObject:[NSNumber numberWithBool:isOn] forKey:self.dietID];
+    [[Data shared].myDiets setObject:[NSNumber numberWithBool:isOn] forKey:self.dietID];
     [[Data shared] save];
     
     if (isOn) {
@@ -32,7 +32,7 @@
             if ([food.state intValue] == FOOD_EATING || [food.state intValue] == FOOD_NOT_EATING) {
                 NSNumber *foodState = [NSNumber numberWithInt:FOOD_EATING];
                 for (NSString *dietID in DIETS_IDS) {
-                    if ([[[Data shared].diets objectForKey:dietID] boolValue]) {
+                    if ([[[Data shared].myDiets objectForKey:dietID] boolValue]) {
                         if (![[food valueForKey:dietID] boolValue]) {
                             foodState = [NSNumber numberWithInt:FOOD_NOT_EATING];
                         }
@@ -41,6 +41,7 @@
                 food.state = foodState;
             }
         }
+        [[Data shared] updateDailyFoods];
         NSError *error = nil;
         [[Data shared].managedObjectContext save:&error];
     }

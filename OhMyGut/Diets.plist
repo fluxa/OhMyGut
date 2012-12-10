@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <array>
+    <dict>
+      <key>dietid</key>
+      <string>scdlegal</string>
+      <key>name</key>
+      <string>SCD</string>
+    </dict>
+    <dict>
+      <key>dietid</key>
+      <string>gapslegal</string>
+      <key>name</key>
+      <string>GAPs</string>
+    </dict>
+    <dict>
+      <key>dietid</key>
+      <string>histamine</string>
+      <key>name</key>
+      <string>Histamine</string>
+    </dict>
+    <dict>
+      <key>dietid</key>
+      <string>fodmaps</string>
+      <key>name</key>
+      <string>FODMAPs</string>
+    </dict>
+    <dict>
+      <key>dietid</key>
+      <string>fiber</string>
+      <key>name</key>
+      <string>Fiber</string>
+    </dict>
+    <dict>
+      <key>dietid</key>
+      <string>goitrogenic</string>
+      <key>name</key>
+      <string>Goitrogenic</string>
+    </dict>
+  </array>
+</plist>

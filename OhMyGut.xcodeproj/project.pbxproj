@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF1F930F166F9CA400605DDE /* EditNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF1F930E166F9CA400605DDE /* EditNotesViewController.m */; };
 		BF56AF1D1660DC05005B465A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF56AF1C1660DC05005B465A /* UIKit.framework */; };
 		BF56AF1F1660DC05005B465A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF56AF1E1660DC05005B465A /* Foundation.framework */; };
 		BF56AF211660DC05005B465A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF56AF201660DC05005B465A /* CoreGraphics.framework */; };
@@ -40,14 +41,19 @@
 		BF56AFB9166258C2005B465A /* FoodScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF56AFB8166258C1005B465A /* FoodScrollView.m */; };
 		BF56AFBF1663055B005B465A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AFBE1663055B005B465A /* icon.png */; };
 		BF56AFC216630561005B465A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF56AFC116630561005B465A /* icon@2x.png */; };
+		BF6898E61673563700836649 /* DayFood.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6898E51673563700836649 /* DayFood.m */; };
+		BF6898EA167356E100836649 /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = BF6898E9167356E100836649 /* Food.m */; };
 		BF729005166B8D6A005B3B9E /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF729004166B8D6A005B3B9E /* FoodViewController.m */; };
-		BFA76F191669EAB70022BC9A /* Food.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76F181669EAB70022BC9A /* Food.m */; };
+		BF8F788A1674D00B00A77CC2 /* Diet.m in Sources */ = {isa = PBXBuildFile; fileRef = BF8F78891674D00B00A77CC2 /* Diet.m */; };
+		BF8F788D1674D1F700A77CC2 /* Diets.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF8F788C1674D1F700A77CC2 /* Diets.plist */; };
 		BFA76F1D166A0F670022BC9A /* DietSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76F1C166A0F670022BC9A /* DietSettingsViewController.m */; };
 		BFA76F20166A0FA50022BC9A /* DietItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA76F1F166A0FA50022BC9A /* DietItem.m */; };
 		BFA76F22166A0FB80022BC9A /* DietItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA76F21166A0FB80022BC9A /* DietItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF1F930D166F9CA400605DDE /* EditNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditNotesViewController.h; sourceTree = "<group>"; };
+		BF1F930E166F9CA400605DDE /* EditNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditNotesViewController.m; sourceTree = "<group>"; };
 		BF56AF181660DC05005B465A /* OhMyGut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OhMyGut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF56AF1C1660DC05005B465A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BF56AF1E1660DC05005B465A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,10 +102,15 @@
 		BF56AFB8166258C1005B465A /* FoodScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodScrollView.m; sourceTree = "<group>"; };
 		BF56AFBE1663055B005B465A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		BF56AFC116630561005B465A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		BF6898E41673563700836649 /* DayFood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayFood.h; sourceTree = "<group>"; };
+		BF6898E51673563700836649 /* DayFood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayFood.m; sourceTree = "<group>"; };
+		BF6898E8167356E100836649 /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
+		BF6898E9167356E100836649 /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
 		BF729003166B8D6A005B3B9E /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		BF729004166B8D6A005B3B9E /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
-		BFA76F171669EAB70022BC9A /* Food.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Food.h; sourceTree = "<group>"; };
-		BFA76F181669EAB70022BC9A /* Food.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Food.m; sourceTree = "<group>"; };
+		BF8F78881674D00B00A77CC2 /* Diet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diet.h; sourceTree = "<group>"; };
+		BF8F78891674D00B00A77CC2 /* Diet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diet.m; sourceTree = "<group>"; };
+		BF8F788C1674D1F700A77CC2 /* Diets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Diets.plist; sourceTree = "<group>"; };
 		BFA76F1B166A0F670022BC9A /* DietSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DietSettingsViewController.h; sourceTree = "<group>"; };
 		BFA76F1C166A0F670022BC9A /* DietSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DietSettingsViewController.m; sourceTree = "<group>"; };
 		BFA76F1E166A0FA50022BC9A /* DietItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DietItem.h; sourceTree = "<group>"; };
@@ -177,6 +188,7 @@
 				BF56AF2E1660DC05005B465A /* Default.png */,
 				BF56AF301660DC05005B465A /* Default@2x.png */,
 				BF56AF321660DC05005B465A /* Default-568h@2x.png */,
+				BF8F788C1674D1F700A77CC2 /* Diets.plist */,
 				BF56AF581660FC17005B465A /* SXGroups.plist */,
 				BF56AF5B1660FD71005B465A /* SXs.plist */,
 				BF56AF8116621EC4005B465A /* FoodGroups.plist */,
@@ -199,8 +211,12 @@
 				BF56AF791662035F005B465A /* SXs.m */,
 				BF56AF9816622C83005B465A /* FoodGroup.h */,
 				BF56AF9916622C83005B465A /* FoodGroup.m */,
-				BFA76F171669EAB70022BC9A /* Food.h */,
-				BFA76F181669EAB70022BC9A /* Food.m */,
+				BF6898E41673563700836649 /* DayFood.h */,
+				BF6898E51673563700836649 /* DayFood.m */,
+				BF6898E8167356E100836649 /* Food.h */,
+				BF6898E9167356E100836649 /* Food.m */,
+				BF8F78881674D00B00A77CC2 /* Diet.h */,
+				BF8F78891674D00B00A77CC2 /* Diet.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -218,6 +234,8 @@
 				BF729004166B8D6A005B3B9E /* FoodViewController.m */,
 				BFA76F1B166A0F670022BC9A /* DietSettingsViewController.h */,
 				BFA76F1C166A0F670022BC9A /* DietSettingsViewController.m */,
+				BF1F930D166F9CA400605DDE /* EditNotesViewController.h */,
+				BF1F930E166F9CA400605DDE /* EditNotesViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -316,6 +334,7 @@
 				BF56AFBF1663055B005B465A /* icon.png in Resources */,
 				BF56AFC216630561005B465A /* icon@2x.png in Resources */,
 				BFA76F22166A0FB80022BC9A /* DietItem.xib in Resources */,
+				BF8F788D1674D1F700A77CC2 /* Diets.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,10 +359,13 @@
 				BF56AFAC16622E58005B465A /* FoodItemView.m in Sources */,
 				BF56AFB61662561B005B465A /* GroupViewController.m in Sources */,
 				BF56AFB9166258C2005B465A /* FoodScrollView.m in Sources */,
-				BFA76F191669EAB70022BC9A /* Food.m in Sources */,
 				BFA76F1D166A0F670022BC9A /* DietSettingsViewController.m in Sources */,
 				BFA76F20166A0FA50022BC9A /* DietItem.m in Sources */,
 				BF729005166B8D6A005B3B9E /* FoodViewController.m in Sources */,
+				BF1F930F166F9CA400605DDE /* EditNotesViewController.m in Sources */,
+				BF6898E61673563700836649 /* DayFood.m in Sources */,
+				BF6898EA167356E100836649 /* Food.m in Sources */,
+				BF8F788A1674D00B00A77CC2 /* Diet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

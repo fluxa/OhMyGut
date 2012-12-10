@@ -1,0 +1,48 @@
+!!! 5
+html(lang='en')
+	head
+		title #{title}
+		include inc/style
+	body
+		div#alerts
+		div#wrap
+			div.container
+				div.page-header
+					h1 #{title}
+					p.lead
+
+				div#push
+
+					div.hero-unit
+						h1 Diets
+						p
+							a.btn.btn-primary.btn-large(onclick='updateData(\'diets\');') update
+							a.btn.btn-large(href='/data/Diets.plist') download
+
+					div.hero-unit
+						h1 SXGroups
+						p
+							a.btn.btn-primary.btn-large(onclick='updateData(\'sxgroups\');') update
+							a.btn.btn-large(href='/data/SXGroups.plist') download
+
+					div.hero-unit
+						h1 SXs
+						p
+							a.btn.btn-primary.btn-large(onclick='updateData(\'sxs\');') update
+							a.btn.btn-large(href='/data/SXs.plist') download
+
+					div.hero-unit
+						h1 FoodGroups
+						p
+							a.btn.btn-primary.btn-large(onclick='updateData(\'foodgroups\');') update
+							a.btn.btn-large(href='/data/FoodGroups.plist') download
+
+					div.hero-unit
+						h1 Foods
+						p
+							a.btn.btn-primary.btn-large(onclick='updateData(\'foods\');') update
+							a.btn.btn-large(href='/data/Foods.plist') download
+						
+		include inc/scripts
+		include inc/scripts_index
+
