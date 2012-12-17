@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FoodScrollView.h"
 #import "Food.h"
 
 @interface FoodViewController : UIViewController
@@ -16,7 +15,8 @@
 @property (nonatomic,weak) IBOutlet UISegmentedControl *stateControl;
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet UITextView *textView;
-@property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
+@property (nonatomic,weak) IBOutlet UIView *dietView;
+@property (nonatomic,weak) IBOutlet UIImageView *imageV;
 @property (nonatomic,strong) Food *food;
 
 @end

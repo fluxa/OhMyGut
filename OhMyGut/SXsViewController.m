@@ -1,22 +1,23 @@
 //
-//  MainViewController.m
+//  SXsViewController.m
 //  OhMyGut
 //
 //  Created by Juan-Manuel Fluxá on 11/24/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "SXsViewController.h"
 #import "Data.h"
 #import "SXCell.h"
+#import "AppDelegate.h"
 
-@interface MainViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface SXsViewController () <UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableDictionary *sxsByGroup;
 
 @end
 
-@implementation MainViewController
+@implementation SXsViewController
 
 
 - (id) initWithCoder:(NSCoder *)aDecoder {
@@ -40,6 +41,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onLeftButton:(id)sender {
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    [app toggleLeftPanel];
 }
 
 #pragma mark UITableView

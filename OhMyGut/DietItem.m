@@ -9,6 +9,7 @@
 #import "DietItem.h"
 #import "Data.h"
 
+
 @implementation DietItem
 
 @synthesize dietID=_dietID;
@@ -31,9 +32,9 @@
         for (Food *food in allfoods) {
             if ([food.state intValue] == FOOD_EATING || [food.state intValue] == FOOD_NOT_EATING) {
                 NSNumber *foodState = [NSNumber numberWithInt:FOOD_EATING];
-                for (NSString *dietID in DIETS_IDS) {
-                    if ([[[Data shared].myDiets objectForKey:dietID] boolValue]) {
-                        if (![[food valueForKey:dietID] boolValue]) {
+                for (Diet *diet in [[Data shared] getDiets]) {
+                    if ([[[Data shared].myDiets objectForKey:diet.dietid] boolValue]) {
+                        if (![[food valueForKey:diet.dietid] boolValue]) {
                             foodState = [NSNumber numberWithInt:FOOD_NOT_EATING];
                         }
                     }

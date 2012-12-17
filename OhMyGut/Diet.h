@@ -2,7 +2,7 @@
 //  Diet.h
 //  OhMyGut
 //
-//  Created by Juan-Manuel Fluxá on 12/9/12.
+//  Created by Juan-Manuel Fluxá on 12/15/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSString * dietid;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * notes;
 
 @end

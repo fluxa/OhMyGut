@@ -1,62 +1,328 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-	<dict>
-		<key>gid</key>
-		<integer>0</integer>
-		<key>name</key>
-		<string>Meat &amp; Poultry</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+  <array>
     <dict>
-		<key>gid</key>
-		<integer>1</integer>
-		<key>name</key>
-		<string>Organ Meats</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+      <key>gid</key>
+      <integer>0</integer>
+      <key>name</key>
+      <string>Non-starchy vegetables</string>
+      <key>notes</key>
+      <string>can write notes here</string>
+    </dict>
     <dict>
-		<key>gid</key>
-		<integer>2</integer>
-		<key>name</key>
-		<string>Bone broth</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+      <key>gid</key>
+      <integer>1</integer>
+      <key>name</key>
+      <string>Green vegetables</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
     <dict>
-		<key>gid</key>
-		<integer>3</integer>
-		<key>name</key>
-		<string>Fish</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+      <key>gid</key>
+      <integer>3</integer>
+      <key>name</key>
+      <string>Starchy tubers</string>
+      <key>notes</key>
+      <string>Those with insulin resistance, hypoglycemia or reactive hypoglycemia, and those wishing to lose weight, should limit starchy vegetables. The total amount eaten each day should equal 1-2 servings of starch. Those who are athletes or have high levels of physical activity may want to increase their carbohydrate intake, especially after training.</string>
+    </dict>
     <dict>
-		<key>gid</key>
-		<integer>4</integer>
-		<key>name</key>
-		<string>Eggs</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+      <key>gid</key>
+      <integer>4</integer>
+      <key>name</key>
+      <string>Fish &amp;Shellfish</string>
+      <key>notes</key>
+      <string>Wild is preferable. You need to eat three 6 oz. servings of fatty fish per week to balance your omega-6 to omega-3 ratio.</string>
+    </dict>
     <dict>
-		<key>gid</key>
-		<integer>5</integer>
-		<key>name</key>
-		<string>Starchy tubers</string>
-		<key>notes</key>
-		<string></string>
-	</dict>
+      <key>gid</key>
+      <integer>5</integer>
+      <key>name</key>
+      <string>Meat &amp; Poultry</string>
+      <key>notes</key>
+      <string>Organic and free-range is always preferable, but is especially so during this program.</string>
+    </dict>
     <dict>
-		<key>gid</key>
-		<integer>6</integer>
-		<key>name</key>
-		<string>SCD ILLEGAL</string>
-		<key>notes</key>
-		<string>test group all SCD illegal</string>
-	</dict>
-</array>
+      <key>gid</key>
+      <integer>6</integer>
+      <key>name</key>
+      <string>Organ Meats</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>7</integer>
+      <key>name</key>
+      <string>Bone broth</string>
+      <key>notes</key>
+      <string>Bone broths are rich in glycine,and amino acid found in collagen, which is a protein important in maintaining a healthy gut lining.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>8</integer>
+      <key>name</key>
+      <string>Eggs</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>9</integer>
+      <key>name</key>
+      <string>Legumes</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>10</integer>
+      <key>name</key>
+      <string>Soy</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>11</integer>
+      <key>name</key>
+      <string>Stone fruits</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>12</integer>
+      <key>name</key>
+      <string>Whole fruit</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>13</integer>
+      <key>name</key>
+      <string>Berries</string>
+      <key>notes</key>
+      <string>low sugar</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>14</integer>
+      <key>name</key>
+      <string>Onion vegetables</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>15</integer>
+      <key>name</key>
+      <string>Fats</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>16</integer>
+      <key>name</key>
+      <string>Nightshades</string>
+      <key>notes</key>
+      <string>Those with arthritis, joint pain, autoimmune disease and severe gut issues should also eliminate nightshades - Nightshades have compounds called alkaloids that can cause inflammation and worsen joint pain in susceptible people.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>17</integer>
+      <key>name</key>
+      <string>Dairy</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>18</integer>
+      <key>name</key>
+      <string>Alcohol</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>19</integer>
+      <key>name</key>
+      <string>Processed sauces &amp; seasonings</string>
+      <key>notes</key>
+      <string>They often have sugar, soy, gluten, or all of the above.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>20</integer>
+      <key>name</key>
+      <string>Condiments &amp; Sauces</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>22</integer>
+      <key>name</key>
+      <string>Grains</string>
+      <key>notes</key>
+      <string>Over 80% of the population develops measurable gut inflammation after eating wheat gluten.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>23</integer>
+      <key>name</key>
+      <string>Sweeteners</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>24</integer>
+      <key>name</key>
+      <string>Sodas &amp; Diet sodas</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>25</integer>
+      <key>name</key>
+      <string>Juice</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>26</integer>
+      <key>name</key>
+      <string>Chocolate</string>
+      <key>notes</key>
+      <string>70% or higher in small amounts (i.e. about the size of a silver dollar per serving) is permitted.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>27</integer>
+      <key>name</key>
+      <string>Industrial seed oils</string>
+      <key>notes</key>
+      <string>Read labels - seed oils are in almost all processed, packaged and refined foods (which you should be mostly avoiding during this phase anyways), BAD</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>28</integer>
+      <key>name</key>
+      <string>Vinegar</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>29</integer>
+      <key>name</key>
+      <string>Fermented vegetables &amp; fruits</string>
+      <key>notes</key>
+      <string>These are excellent for gut health.</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>30</integer>
+      <key>name</key>
+      <string>Dried fruit</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>31</integer>
+      <key>name</key>
+      <string>Citrus fruit</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>32</integer>
+      <key>name</key>
+      <string>Nuts &amp; seeds</string>
+      <key>notes</key>
+      <string>A maximum of a handful per day, preferably soaked overnight and dehydrated or roasted at low temperature (150 degrees) to improve digestibility. Favor nuts lower in omega-6, like hazelnuts and macadamias, and minimize nuts high in omega-6, like brazil nuts and almonds.Peanut is not included!</string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>33</integer>
+      <key>name</key>
+      <string>Caffeine</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>34</integer>
+      <key>name</key>
+      <string>Herbs</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>35</integer>
+      <key>name</key>
+      <string>Processed meat</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
+    </dict>
+    <dict>
+      <key>gid</key>
+      <integer>36</integer>
+      <key>name</key>
+      <string>Processed or refined foods</string>
+      <key>notes</key>
+      <string>As a general rule, if it comes in a bag or a box, don’t eat it. This also includes highly processed “health foods” like protein powder, energy bars, dairy-free creamers, etc.</string>
+    </dict>
+  </array>
 </plist>

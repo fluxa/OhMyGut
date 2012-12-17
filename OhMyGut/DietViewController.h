@@ -11,6 +11,9 @@
 
 @interface DietViewController : UIViewController
 
+@property (nonatomic,assign) BOOL renderEating;
+@property (nonatomic,assign) BOOL renderAll;
+
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet UIButton *renderButton;
 @property (nonatomic,weak) IBOutlet UIButton *renderAllButton;

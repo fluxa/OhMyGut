@@ -7,36 +7,58 @@
       <string>scdlegal</string>
       <key>name</key>
       <string>SCD</string>
+      <key>notes</key>
+      <string>yeah can!</string>
     </dict>
     <dict>
       <key>dietid</key>
       <string>gapslegal</string>
       <key>name</key>
       <string>GAPs</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
     </dict>
     <dict>
       <key>dietid</key>
       <string>histamine</string>
       <key>name</key>
       <string>Histamine</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
     </dict>
     <dict>
       <key>dietid</key>
       <string>fodmaps</string>
       <key>name</key>
       <string>FODMAPs</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
     </dict>
     <dict>
       <key>dietid</key>
       <string>fiber</string>
       <key>name</key>
       <string>Fiber</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
     </dict>
     <dict>
       <key>dietid</key>
       <string>goitrogenic</string>
       <key>name</key>
       <string>Goitrogenic</string>
+      <key>notes</key>
+      <string>
+        
+      </string>
     </dict>
   </array>
 </plist>

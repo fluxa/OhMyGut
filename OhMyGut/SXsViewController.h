@@ -1,5 +1,5 @@
 //
-//  MainViewController.h
+//  SXsViewController.h
 //  OhMyGut
 //
 //  Created by Juan-Manuel Fluxá on 11/24/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface SXsViewController : UIViewController
 
 @end

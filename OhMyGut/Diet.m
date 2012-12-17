@@ -2,7 +2,7 @@
 //  Diet.m
 //  OhMyGut
 //
-//  Created by Juan-Manuel Fluxá on 12/9/12.
+//  Created by Juan-Manuel Fluxá on 12/15/12.
 //  Copyright (c) 2012 Fluxa. All rights reserved.
 //
 
@@ -13,5 +13,6 @@
 
 @dynamic dietid;
 @dynamic name;
+@dynamic notes;
 
 @end

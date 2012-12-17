@@ -14,11 +14,9 @@
 #import "FoodItemView.h"
 #import "GroupViewController.h"
 #import "FoodViewController.h"
+#import "AppDelegate.h"
 
 @interface DietViewController ()
-
-@property (nonatomic,assign) BOOL renderEating;
-@property (nonatomic,assign) BOOL renderAll;
 
 @end
 
@@ -37,9 +35,6 @@
 {
     [super viewDidLoad];
 	self.renderEating = YES;
-    if ([[Data shared].myDiets count] == 0) {
-        [self performSegueWithIdentifier:@"settings" sender:nil];
-    }
 }
 
 - (void) viewWillAppear:(BOOL)animated {
@@ -50,7 +45,7 @@
 - (void) renderView {
     
     if (self.renderEating) {
-        self.titleLabel.text = @"What I'm eating";
+        self.titleLabel.text = @"What I can eat";
         [self.renderButton setTitle:@"NOT" forState:UIControlStateNormal];
     } else {
         self.titleLabel.text = @"What I'm NOT eating";
@@ -83,6 +78,8 @@
             NSArray *fs = [[[[Data shared] getFilteredFoodGroups] objectForKey:fg.gid] objectAtIndex:duplaIndex];
             [foods addObjectsFromArray:fs];
         }
+        //order
+        [foods sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)]]];
         self.scrollView.items = foods;
         [self.scrollView render];
         [self.scrollView setOnItemClick:^(NSManagedObject* obj){
@@ -128,9 +125,7 @@
     
 }
 
-- (IBAction)onSettings:(id)sender {
-    [self performSegueWithIdentifier:@"settings" sender:nil];
-}
+
 
 - (IBAction)onRender:(id)sender {
     
@@ -151,6 +146,11 @@
     } completion:^(BOOL finished) {
         [self renderView];
     }];
+}
+
+- (IBAction)onLeftButton:(id)sender {
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    [app toggleLeftPanel];
 }
 
 @end

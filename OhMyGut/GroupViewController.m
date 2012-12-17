@@ -29,6 +29,7 @@
     self.scrollView.onItemClick = ^(NSManagedObject *item){
         [safeSelf performSegueWithIdentifier:@"food" sender:item];
     };
+    self.imgV.image = [UIImage imageNamed:[NSString stringWithFormat:@"group_%d.jpg",self.foodGroup.gid.intValue]];
     [self.scrollView render];
     
 }

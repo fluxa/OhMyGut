@@ -9,6 +9,7 @@
 #import "FoodViewController.h"
 #import "Data.h"
 #import "EditNotesViewController.h"
+#import "DietItemRenderer.h"
 
 @interface FoodViewController ()
 
@@ -29,17 +30,28 @@
     self.titleLabel.text = self.food.name;
     self.stateControl.selectedSegmentIndex = [self.food.state intValue];
     self.textView.text = self.food.notes;
+    self.imageV.image = [UIImage imageNamed:[NSString stringWithFormat:@"food_%d.jpg",self.food.foodid.intValue]];
     
-    NSMutableArray *items = [NSMutableArray array];
-    for (NSString *dietID in DIETS_IDS) {
-        int state = [[self.food valueForKey:dietID] boolValue] ? 0 : 2;
-        NSDictionary *item = @{@"name":dietID,@"state":[NSNumber numberWithInt:state]};
-        [items addObject:item];
+    int i = 0;
+    int posY = 0;
+    for (Diet *diet in [[Data shared] getDiets]) {
+        
+        DietItemRenderer *d = [[[NSBundle mainBundle] loadNibNamed:@"DietItemRenderer" owner:self options:nil] objectAtIndex:0];
+        d.diet = diet;
+        d.state = [[self.food valueForKey:diet.dietid] boolValue] ? 1 : 0;
+        
+        if (i%2==0) {
+            d.frame = CGRectMake(320/2 + 10, posY, d.frame.size.width, d.frame.size.height);
+        } else {
+            d.frame = CGRectMake(10, posY, d.frame.size.width, d.frame.size.height);
+            posY += d.frame.size.height + 3;
+        }
+        
+        [self.dietView addSubview:d];
+        
+        i++;
     }
     
-    self.scrollView.items = items;
-    [self.scrollView render];
-
 }
 
 - (void)didReceiveMemoryWarning

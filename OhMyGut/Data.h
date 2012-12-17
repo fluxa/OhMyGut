@@ -15,7 +15,6 @@
 #import "DayFood.h"
 #import "Diet.h"
 
-#define DIETS_IDS @[@"scdlegal",@"gapslegal",@"histamine",@"fodmaps",@"fiber",@"goitrogenic"]
 #define FOOD_SAFE 0
 #define FOOD_EATING 1
 #define FOOD_NOT_EATING 2
@@ -37,6 +36,7 @@
 - (NSArray*) getSymptoms;
 - (NSArray*) getFoodGroups;
 - (NSArray*) getFoods;
+- (NSArray*) getDiets;
 - (NSMutableDictionary*) getFilteredFoodGroups;
 - (SXGroup*) groupByID:(int) gid;
 - (DaySX*) getDaySX:(SXs*)sx date:(NSDate*)date;

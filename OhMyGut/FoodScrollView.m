@@ -84,7 +84,7 @@
         [self addSubview:itemv];
     }
     
-    [self setContentSize:CGSizeMake(contSize.width, locY)];
+    [self setContentSize:CGSizeMake(contSize.width, locY+30)];
     
 }
 

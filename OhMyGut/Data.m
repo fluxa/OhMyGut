@@ -139,6 +139,7 @@
             
             diet.dietid = dict[@"dietid"];
             diet.name = dict[@"name"];
+            diet.notes = dict[@"notes"];
             
         }
         _diets = nil;
@@ -194,7 +195,7 @@
         NSError *error = nil;
         _diets = [self.managedObjectContext executeFetchRequest:request error:&error];
         NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"dietid" ascending:YES];
-        _diets = [_groups sortedArrayUsingDescriptors:@[sort]];
+        _diets = [_diets sortedArrayUsingDescriptors:@[sort]];
         if (error != nil) {
             Alert(@"Data", [error description]);
         }

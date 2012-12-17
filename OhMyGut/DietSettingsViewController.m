@@ -9,6 +9,7 @@
 #import "DietSettingsViewController.h"
 #import "DietItem.h"
 #import "Data.h"
+#import "AppDelegate.h"
 
 @interface DietSettingsViewController ()
 
@@ -30,9 +31,9 @@
     [super viewDidLoad];
     
     int posY = 0;
-    for (NSString *dietID in DIETS_IDS) {
+    for (Diet *diet in [[Data shared] getDiets]) {
         DietItem *item = [[[NSBundle mainBundle] loadNibNamed:@"DietItem" owner:self options:nil] objectAtIndex:0];
-        item.dietID = dietID;
+        item.dietID = diet.dietid;
         CGRect f = CGRectMake(0, posY, 320, 60);
         item.frame = f;
         [self.scrollView addSubview:item];
@@ -46,8 +47,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onClose:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+
+- (IBAction)onLeftButton:(id)sender {
+    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    [app toggleLeftPanel];
 }
 
 @end

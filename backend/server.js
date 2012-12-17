@@ -30,7 +30,7 @@ String.prototype.format = function() {
 
 // ENV
 var port = process.env.PORT || process.env.VCAP_APP_PORT || 5008;
-
+console.log('listening on port %d',port);
 server.listen(port);
 
 
@@ -91,12 +91,25 @@ app.get('/foodgroups',function(req,res) {
 app.get('/foods',function(req,res) {
 	loadFromSpreadsheet(
 		3,
-		'R2C1:R{0}C3',
+		'R2C1:R{0}C10',
 		'Foods.plist', 
 		function(row) {
-			var obj = {'gid':parseInt(row['1'].value),'name':row['2'].value,'notes':''};
-			if (row['3']) {
-				obj.notes = row['3'].value;
+
+			var obj = {
+				'gid':parseInt(row['1'].value),
+				'foodid':parseInt(row['2'].value),
+				'name':row['3'].value,
+				'scdlegal':parseInt(row['4'].value),
+				'gapslegal':parseInt(row['5'].value),
+				'histamine':parseInt(row['6'].value),
+				'fodmaps':parseInt(row['7'].value),
+				'fiber':parseInt(row['8'].value),
+				'goitrogenic':parseInt(row['9'].value),
+				'notes':''
+			};
+
+			if (row['10']) {
+				obj.notes = row['10'].value;
 			};
 			return obj;
 		},
@@ -109,10 +122,13 @@ app.get('/foods',function(req,res) {
 app.get('/diets',function(req,res) {
 	loadFromSpreadsheet(
 		4,
-		'R2C1:R{0}C2',
+		'R2C1:R{0}C3',
 		'Diets.plist', 
 		function(row) {
-			var obj = {'dietid':row['1'].value,'name':row['2'].value};
+			var obj = {'dietid':row['1'].value,'name':row['2'].value,'notes':''};
+			if (row['3']) {
+				obj.notes = row['3'].value;
+			};
 			return obj;
 		},
 		function(data) {

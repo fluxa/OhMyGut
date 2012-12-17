@@ -16,6 +16,7 @@
 @property (nonatomic,assign) BOOL renderEating;
 @property (nonatomic,weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic,weak) IBOutlet FoodScrollView *scrollView;
+@property (nonatomic,weak) IBOutlet UIImageView *imgV;
 
 @property (nonatomic,strong) FoodGroup *foodGroup;
 

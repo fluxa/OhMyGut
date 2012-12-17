@@ -8,13 +8,22 @@
 
 #import "AppDelegate.h"
 #import "Data.h"
+#import "IIViewDeckController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Data shared];
-    // Override point for customization after application launch.
+    
+    IIViewDeckController *vdc = (IIViewDeckController*)self.window.rootViewController;
+    
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+    self.leftVC = [sb instantiateViewControllerWithIdentifier:@"LeftVC"];
+    self.leftVC.deckVC = vdc;
+    vdc.leftController = self.leftVC;
+
     return YES;
 }
 							
@@ -43,6 +52,15 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) toggleLeftPanel {
+    if(self.leftVC.deckVC.leftControllerIsClosed){
+        [self.leftVC.deckVC openLeftView];
+    } else {
+        [self.leftVC.deckVC closeLeftView];
+        
+    }
 }
 
 @end
